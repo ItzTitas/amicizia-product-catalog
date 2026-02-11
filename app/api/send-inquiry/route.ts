@@ -5,13 +5,29 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
+    console.log('=== Email API Called ===');
+    console.log('RESEND_API_KEY exists:', !!process.env.RESEND_API_KEY);
+    console.log('SALES_EMAIL:', process.env.SALES_EMAIL);
+
     const { customerInfo, cartItems } = await request.json();
+    console.log('Customer info received:', customerInfo);
+    console.log('Cart items count:', cartItems?.length);
 
     // Validate input
     if (!customerInfo?.name || !customerInfo?.email || !cartItems?.length) {
+      console.error('Validation failed:', { customerInfo, cartItemsLength: cartItems?.length });
       return NextResponse.json(
         { error: 'Missing required information' },
         { status: 400 }
+      );
+    }
+
+    // Check if Resend API key exists
+    if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY not found in environment variables');
+      return NextResponse.json(
+        { error: 'Email service not configured' },
+        { status: 500 }
       );
     }
 
@@ -76,6 +92,8 @@ export async function POST(request: Request) {
       </html>
     `;
 
+    console.log('Attempting to send email via Resend...');
+
     // Send email
     const { data, error } = await resend.emails.send({
       from: 'Amicizia Orders <onboarding@resend.dev>',
@@ -86,18 +104,20 @@ export async function POST(request: Request) {
     });
 
     if (error) {
-      console.error('Resend error:', error);
+      console.error('Resend API error:', JSON.stringify(error, null, 2));
       return NextResponse.json(
-        { error: 'Failed to send email' },
+        { error: 'Failed to send email', details: error.message },
         { status: 500 }
       );
     }
 
+    console.log('Email sent successfully! Message ID:', data?.id);
     return NextResponse.json({ success: true, messageId: data?.id });
   } catch (error) {
     console.error('Server error:', error);
+    console.error('Error stack:', error instanceof Error ? error.stack : 'No stack trace');
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { error: 'Internal server error', details: error instanceof Error ? error.message : 'Unknown error' },
       { status: 500 }
     );
   }
