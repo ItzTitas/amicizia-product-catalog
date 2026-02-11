@@ -4,19 +4,19 @@ import { NextResponse } from 'next/server';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
-    try {
-        const { customerInfo, cartItems } = await request.json();
+  try {
+    const { customerInfo, cartItems } = await request.json();
 
-        // Validate input
-        if (!customerInfo?.name || !customerInfo?.email || !cartItems?.length) {
-            return NextResponse.json(
-                { error: 'Missing required information' },
-                { status: 400 }
-            );
-        }
+    // Validate input
+    if (!customerInfo?.name || !customerInfo?.email || !cartItems?.length) {
+      return NextResponse.json(
+        { error: 'Missing required information' },
+        { status: 400 }
+      );
+    }
 
-        // Generate email HTML
-        const emailHtml = `
+    // Generate email HTML
+    const emailHtml = `
       <!DOCTYPE html>
       <html>
         <head>
@@ -76,29 +76,29 @@ export async function POST(request: Request) {
       </html>
     `;
 
-        // Send email
-        const { data, error } = await resend.emails.send({
-            from: 'Amicizia Orders <onboarding@resend.dev>', // You'll need to verify your domain later
-            to: [process.env.SALES_EMAIL || 'info@amicizialifescience.com'],
-            subject: `New Order Inquiry from ${customerInfo.name}`,
-            html: emailHtml,
-            replyTo: customerInfo.email,
-        });
+    // Send email
+    const { data, error } = await resend.emails.send({
+      from: 'Amicizia Orders <onboarding@resend.dev>',
+      to: [process.env.SALES_EMAIL || 'info@amicizialifescience.com'],
+      subject: `New Order Inquiry from ${customerInfo.name}`,
+      html: emailHtml,
+      replyTo: customerInfo.email,
+    });
 
-        if (error) {
-            console.error('Resend error:', error);
-            return NextResponse.json(
-                { error: 'Failed to send email' },
-                { status: 500 }
-            );
-        }
-
-        return NextResponse.json({ success: true, messageId: data?.id });
-    } catch (error) {
-        console.error('Server error:', error);
-        return NextResponse.json(
-            { error: 'Internal server error' },
-            { status: 500 }
-        );
+    if (error) {
+      console.error('Resend error:', error);
+      return NextResponse.json(
+        { error: 'Failed to send email' },
+        { status: 500 }
+      );
     }
+
+    return NextResponse.json({ success: true, messageId: data?.id });
+  } catch (error) {
+    console.error('Server error:', error);
+    return NextResponse.json(
+      { error: 'Internal server error' },
+      { status: 500 }
+    );
+  }
 }
