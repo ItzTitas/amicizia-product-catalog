@@ -1,11 +1,16 @@
 import Link from "next/link";
 import NextImage from "next/image";
+import { Metadata } from "next";
 import { products, categories } from "@/lib/products";
 import { ProductSearch } from "@/components/product/ProductSearch";
 import { ProductSort } from "@/components/product/ProductSort";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge, Package2, Sparkles, ChevronRight } from "lucide-react";
+
+export const metadata: Metadata = {
+    title: "Amicizia Life Science | Products",
+};
 
 export const dynamic = 'force-dynamic';
 
@@ -21,7 +26,7 @@ export default async function ProductsPage({
     let filteredProducts = products;
 
     if (categoryFilter) {
-        filteredProducts = filteredProducts.filter((p) => p.category === categoryFilter);
+        filteredProducts = filteredProducts.filter((p) => p.categories.includes(categoryFilter as any));
     }
 
     if (searchTerm) {
@@ -93,7 +98,14 @@ export default async function ProductsPage({
                                         href={`/products?category=${cat}`}
                                         className={`inline-flex items-center justify-start whitespace-nowrap rounded-xl text-sm font-semibold transition-all h-12 px-5 py-3 w-full text-left ${categoryFilter === cat ? "bg-gradient-to-r from-teal-500 to-cyan-500 text-white shadow-lg shadow-teal-500/50" : "hover:bg-teal-50 hover:translate-x-2 text-slate-700"}`}
                                     >
-                                        {cat === 'Livestock' && '🐄'} {cat === 'Poultry' && '🐔'} {cat === 'Canine' && '🐕'} {cat}
+                                        {cat === 'Livestock' && '🐄'}
+                                        {cat === 'Poultry' && '🐔'}
+                                        {cat === 'Canine' && '🐕'}
+                                        {cat === 'Swine' && '🐖'}
+                                        {cat === 'Aqua' && '🐟'}
+                                        {cat === 'Homeopathy' && '🌿'}
+                                        {cat === 'Over the Counter' && '💊'}
+                                        {cat}
                                     </Link>
                                 ))}
                             </div>
@@ -139,16 +151,22 @@ export default async function ProductsPage({
                                                     <Package2 className="h-16 w-16 opacity-20 group-hover:opacity-30 transition-opacity text-teal-600" />
                                                 </div>
                                             )}
-                                            {/* Colorful Category Badge */}
-                                            <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110">
-                                                <Badge className={`
-                                                    ${product.category === 'Livestock' ? 'bg-gradient-to-r from-green-400 to-emerald-500' : ''}
-                                                    ${product.category === 'Poultry' ? 'bg-gradient-to-r from-yellow-400 to-orange-500' : ''}
-                                                    ${product.category === 'Canine' ? 'bg-gradient-to-r from-blue-400 to-purple-500' : ''}
-                                                    text-white font-bold shadow-lg backdrop-blur-sm border-0
-                                                `}>
-                                                    {product.category}
-                                                </Badge>
+                                            {/* Colorful Category Badges */}
+                                            <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110 flex flex-col gap-1.5">
+                                                {product.categories.map((cat) => (
+                                                    <Badge key={cat} className={`
+                                                        ${cat === 'Livestock' ? 'bg-gradient-to-r from-green-400 to-emerald-500' : ''}
+                                                        ${cat === 'Poultry' ? 'bg-gradient-to-r from-yellow-400 to-orange-500' : ''}
+                                                        ${cat === 'Canine' ? 'bg-gradient-to-r from-blue-400 to-purple-500' : ''}
+                                                        ${cat === 'Swine' ? 'bg-gradient-to-r from-pink-400 to-rose-500' : ''}
+                                                        ${cat === 'Aqua' ? 'bg-gradient-to-r from-cyan-400 to-blue-500' : ''}
+                                                        ${cat === 'Homeopathy' ? 'bg-gradient-to-r from-lime-400 to-emerald-500' : ''}
+                                                        ${cat === 'Over the Counter' ? 'bg-gradient-to-r from-amber-400 to-orange-500' : ''}
+                                                        text-white font-bold shadow-lg backdrop-blur-sm border-0
+                                                    `}>
+                                                        {cat}
+                                                    </Badge>
+                                                ))}
                                             </div>
                                         </div>
 

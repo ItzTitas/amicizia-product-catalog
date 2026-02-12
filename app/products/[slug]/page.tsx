@@ -44,14 +44,22 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
     };
 
     // Category-specific gradient colors
-    const getCategoryGradient = () => {
-        switch (product.category) {
+    const getCategoryGradient = (cat: string) => {
+        switch (cat) {
             case 'Livestock':
                 return 'from-green-400 to-emerald-500';
             case 'Poultry':
                 return 'from-yellow-400 to-orange-500';
             case 'Canine':
                 return 'from-blue-400 to-purple-500';
+            case 'Swine':
+                return 'from-pink-400 to-rose-500';
+            case 'Aqua':
+                return 'from-cyan-400 to-blue-500';
+            case 'Homeopathy':
+                return 'from-lime-400 to-emerald-500';
+            case 'Over the Counter':
+                return 'from-amber-400 to-orange-500';
             default:
                 return 'from-teal-400 to-cyan-500';
         }
@@ -98,11 +106,15 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                     <div className="md:col-span-1 lg:col-span-7 space-y-8">
                         {/* Header Section with Gradient Badge */}
                         <div className="border-b border-teal-100 pb-6">
-                            <div className="flex items-center gap-3 mb-4">
-                                <span className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-bold text-white shadow-lg bg-gradient-to-r ${getCategoryGradient()}`}>
-                                    <Sparkles className="h-4 w-4" />
-                                    {product.category}
-                                </span>
+                            <div className="flex items-center gap-3 mb-4 flex-wrap">
+                                {product.categories.map((cat) => (
+                                    <Link key={cat} href={`/products?category=${cat}`}>
+                                        <span className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-bold text-white shadow-lg bg-gradient-to-r ${getCategoryGradient(cat)} hover:scale-105 transition-transform cursor-pointer`}>
+                                            <Sparkles className="h-4 w-4" />
+                                            {cat}
+                                        </span>
+                                    </Link>
+                                ))}
                                 {product.packaging && (
                                     <span className="text-sm font-medium text-slate-600 bg-slate-100 px-3 py-1 rounded-full">
                                         {product.packaging}

@@ -8,10 +8,12 @@ import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Amicizia Life Science - Shopping",
+  title: "Amicizia Life Science | Home",
   description: "A noble cause to serve the livestock with scientific, technical and clinical solutions.",
   icons: {
     icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
   },
 };
 
