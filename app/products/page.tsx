@@ -44,13 +44,26 @@ export default async function ProductsPage({
     return (
         <div className="min-h-screen bg-gray-50/50">
             {/* Hero Section */}
-            <div className="bg-primary/5 py-12 mb-8 border-b">
-                <div className="container pl-6 md:pl-12">
-                    <h1 className="text-4xl md:text-5xl font-bold tracking-wide mb-4 bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
-                        {categoryFilter ? `${categoryFilter} Products` : "Our Products"}
+            <div className="relative bg-slate-900 py-16 mb-10 overflow-hidden">
+                <div className="absolute inset-0 opacity-20">
+                    <div className="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-primary blur-3xl mix-blend-screen"></div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-blue-600/30 blur-3xl mix-blend-screen"></div>
+                    <div className="absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-emerald-500 blur-3xl mix-blend-screen"></div>
+                </div>
+
+                <div className="container relative z-10 text-center">
+                    <div className="inline-flex items-center justify-center p-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
+                        <Badge className="bg-primary hover:bg-primary text-white px-4 py-1 rounded-full text-sm font-medium">
+                            {categoryFilter ? categoryFilter : "Premium Catalog"}
+                        </Badge>
+                    </div>
+
+                    <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-white drop-shadow-sm">
+                        {categoryFilter ? `${categoryFilter} Solutions` : "Pharmaceutical Excellence"}
                     </h1>
-                    <p className="text-lg text-muted-foreground max-w-2xl">
-                        Explore our comprehensive range of high-quality pharmaceutical solutions for livestock, poultry, and canine health.
+
+                    <p className="text-lg md:text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed">
+                        Discover our scientifically formulated range of veterinary products designed for superior livestock, poultry, and companion animal health.
                     </p>
                 </div>
             </div>
@@ -98,7 +111,7 @@ export default async function ProductsPage({
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 xl:gap-8">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6 xl:gap-8">
                             {filteredProducts.map((product) => (
                                 <Link key={product.id} href={`/products/${product.slug}`} className="group h-full block">
                                     <Card className="flex flex-col h-full overflow-hidden border-transparent hover:border-primary/20 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white">
