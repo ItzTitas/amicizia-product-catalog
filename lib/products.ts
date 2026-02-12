@@ -1163,11 +1163,7 @@ export const products: Product[] = [
     "dosage": "5mg to 10mg per kg Body weight by IV/IM route for 3 to 5 days or as advised by V eterinarian.",
     "packaging": "Standard Packaging",
     "images": [
-      "/images/products/Savety Vet 1.125gms.png",
-      "/images/products/Savety Vet 125gms.png",
-      "/images/products/Savety Vet 1gms.png",
-      "/images/products/Savety Vet 250gms.png",
-      "/images/products/Savety Vet 2gms.png"
+      "/Products Amicizia/Safety Vet.png"
     ],
     "skus": [
       {
@@ -1232,8 +1228,7 @@ export const products: Product[] = [
     "dosage": "5 to 10mg per kg Body weight by IV/IM route for 3 to 5 days or as advised by V eterinarian.",
     "packaging": "Standard Packaging",
     "images": [
-      "/images/products/Savety Vet Plus 281.25.png",
-      "/images/products/Savety Vet Plus 562.5gms.png"
+      "/Products Amicizia/Safety Vet Plus.png"
     ],
     "skus": [
       {
