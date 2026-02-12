@@ -112,7 +112,7 @@ export default function HomePage() {
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-on-scroll">
-            Welcome to Amicizia Life Sciences
+            Welcome to Amicizia Life Science
           </h1>
           <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto animate-on-scroll" style={{ transitionDelay: '0.2s' }}>
             A noble cause to serve the livestock with scientific, technical and clinical solutions.

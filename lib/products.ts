@@ -67,7 +67,7 @@ export const products: Product[] = [
   {
     "id": "aquarena",
     "slug": "aquarena",
-    "name": "AquaRena",
+    "name": "Aqua-Rena",
     "category": "Poultry",
     "description": "Water sanitizer and disinfectant effective in hard water; bactericidal, fungicidal, algaecidal and virucidal.",
     "composition": "Didecyl Dimethyl Ammonium Chloride – 15 gm per 100 ml",
@@ -155,7 +155,7 @@ export const products: Product[] = [
   {
     "id": "bcom-plus",
     "slug": "bcom-plus",
-    "name": "BCom Plus",
+    "name": "B-Com Plus",
     "category": "Livestock",
     "description": "Concentrated B-complex and amino acid supplement.",
     "composition": "Vitamin B1, B2, B6, B12\nNiacinamide\nMethionine\nLysine\nVitamin C\nVitamin E\nCholine\nBiotin",
@@ -409,7 +409,7 @@ export const products: Product[] = [
   {
     "id": "floxin",
     "slug": "floxin",
-    "name": "Floxin",
+    "name": "Floxin-L",
     "category": "Livestock",
     "description": "High quality Livestock product by Amicizia Life Science.",
     "composition": "",
@@ -691,7 +691,7 @@ export const products: Product[] = [
   {
     "id": "iroliv",
     "slug": "iroliv",
-    "name": "Iroliv",
+    "name": "Iro-Liv",
     "category": "Poultry",
     "description": "Oral haematinic with digestive and hepatoprotective properties.",
     "composition": "Liver extract\nFerrous salts\nB-complex vitamins\nPapain\nDiastase\nCalcium Lactate",
@@ -758,7 +758,7 @@ export const products: Product[] = [
   {
     "id": "iroliv-power",
     "slug": "iroliv-power",
-    "name": "Iroliv Power",
+    "name": "Iro-Liv Power",
     "category": "Poultry",
     "description": "Iron and calcium supplement with hepatoprotective activity.",
     "composition": "Malt Extract\nCalcium Gluconate\nFerric Ammonium Citrate\nCopper Sulphate\nVitamin D3\nNiacinamide\nBiotin\nCholine Chloride\nFolic Acid\nVitamin B12\nSilymarin\nTricholine Citrate",
@@ -966,7 +966,7 @@ export const products: Product[] = [
   {
     "id": "no-coli",
     "slug": "no-coli",
-    "name": "No Coli",
+    "name": "No-Coli",
     "category": "Livestock",
     "description": "Homeopathic formulation intended for prevention and supportive management of colibacillosis.",
     "composition": "Homeopathic formulation.",
@@ -1079,7 +1079,7 @@ export const products: Product[] = [
   {
     "id": "pipzin-vet",
     "slug": "pipzin-vet",
-    "name": "Pipzin Vet",
+    "name": "PIPZIN-Vet",
     "category": "Livestock",
     "description": "High quality Livestock product by Amicizia Life Science.",
     "composition": "",
@@ -1761,7 +1761,7 @@ export const products: Product[] = [
   {
     "id": "piggo-csfend",
     "slug": "piggo-csfend",
-    "name": "Piggo csfEND",
+    "name": "Piggo CSFend",
     "category": "Livestock",
     "description": "Piggo csfEND by Amicizia Life Science.",
     "composition": "",
