@@ -28,9 +28,9 @@ export const categories: Category[] = ["Livestock", "Poultry", "Canine"];
 
 export const products: Product[] = [
   {
-    "id": "amicial-gold",
-    "slug": "amicial-gold",
-    "name": "Amicial Gold",
+    "id": "amical-gold",
+    "slug": "amical-gold",
+    "name": "Amical Gold",
     "category": "Livestock",
     "description": "High quality Livestock product by Amicizia Life Science.",
     "composition": "",
@@ -38,14 +38,28 @@ export const products: Product[] = [
     "dosage": "",
     "packaging": "Standard Packaging",
     "images": [
-      "/images/products/Amicial Gold Family.png"
+      "/images/products/Amical Gold Family.png"
     ],
     "skus": [
       {
-        "id": "amicial-gold-std",
-        "name": "Standard Pack",
+        "id": "amical-gold-0",
+        "name": "100 ml",
         "code": "AMI-1",
-        "unitSize": "Standard",
+        "unitSize": "100 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "amical-gold-1",
+        "name": "1 L",
+        "code": "AMI-2",
+        "unitSize": "1 L",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "amical-gold-2",
+        "name": "5 L",
+        "code": "AMI-3",
+        "unitSize": "5 L",
         "packSize": "1 Unit"
       }
     ]
@@ -84,13 +98,20 @@ export const products: Product[] = [
         "code": "AQU-3",
         "unitSize": "1 Lit",
         "packSize": "1 Unit"
+      },
+      {
+        "id": "aquarena-3",
+        "name": "5 Lit",
+        "code": "AQU-4",
+        "unitSize": "5 Lit",
+        "packSize": "1 Unit"
       }
     ]
   },
   {
-    "id": "avimec-tablets",
-    "slug": "avimec-tablets",
-    "name": "Avimec Tablets",
+    "id": "avimec",
+    "slug": "avimec",
+    "name": "Avimec",
     "category": "Livestock",
     "description": "High quality Livestock product by Amicizia Life Science.",
     "composition": "",
@@ -102,10 +123,31 @@ export const products: Product[] = [
     ],
     "skus": [
       {
-        "id": "avimec-tablets-std",
-        "name": "Standard Pack",
+        "id": "avimec-0",
+        "name": "1 ml",
         "code": "AVI-1",
-        "unitSize": "Standard",
+        "unitSize": "1 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "avimec-1",
+        "name": "10 ml",
+        "code": "AVI-2",
+        "unitSize": "10 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "avimec-2",
+        "name": "100 ml",
+        "code": "AVI-3",
+        "unitSize": "100 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "avimec-3",
+        "name": "10 mg tablet",
+        "code": "AVI-4",
+        "unitSize": "10 mg tablet",
         "packSize": "1 Unit"
       }
     ]
@@ -125,10 +167,31 @@ export const products: Product[] = [
     ],
     "skus": [
       {
-        "id": "bcom-plus-std",
-        "name": "Standard Pack",
+        "id": "bcom-plus-0",
+        "name": "1 L",
         "code": "BCO-1",
-        "unitSize": "Standard",
+        "unitSize": "1 L",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "bcom-plus-1",
+        "name": "100 ml",
+        "code": "BCO-2",
+        "unitSize": "100 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "bcom-plus-2",
+        "name": "500 ml",
+        "code": "BCO-3",
+        "unitSize": "500 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "bcom-plus-3",
+        "name": "5 L",
+        "code": "BCO-4",
+        "unitSize": "5 L",
         "packSize": "1 Unit"
       }
     ]
@@ -148,18 +211,25 @@ export const products: Product[] = [
     ],
     "skus": [
       {
-        "id": "c-cure-std",
-        "name": "Standard Pack",
+        "id": "c-cure-0",
+        "name": "500 ml",
         "code": "C-C-1",
-        "unitSize": "Standard",
+        "unitSize": "500 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "c-cure-1",
+        "name": "1 L",
+        "code": "C-C-2",
+        "unitSize": "1 L",
         "packSize": "1 Unit"
       }
     ]
   },
   {
-    "id": "canotil-bolus",
-    "slug": "canotil-bolus",
-    "name": "Canotil Bolus",
+    "id": "canotil",
+    "slug": "canotil",
+    "name": "Canotil",
     "category": "Livestock",
     "description": "High quality Livestock product by Amicizia Life Science.",
     "composition": "",
@@ -171,10 +241,17 @@ export const products: Product[] = [
     ],
     "skus": [
       {
-        "id": "canotil-bolus-std",
-        "name": "Standard Pack",
+        "id": "canotil-0",
+        "name": "100 mg",
         "code": "CAN-1",
-        "unitSize": "Standard",
+        "unitSize": "100 mg",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "canotil-1",
+        "name": "200 mg",
+        "code": "CAN-2",
+        "unitSize": "200 mg",
         "packSize": "1 Unit"
       }
     ]
@@ -194,10 +271,24 @@ export const products: Product[] = [
     ],
     "skus": [
       {
-        "id": "cough-null-std",
-        "name": "Standard Pack",
+        "id": "cough-null-0",
+        "name": "1 L",
         "code": "COU-1",
-        "unitSize": "Standard",
+        "unitSize": "1 L",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "cough-null-1",
+        "name": "100 ml",
+        "code": "COU-2",
+        "unitSize": "100 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "cough-null-2",
+        "name": "500 ml",
+        "code": "COU-3",
+        "unitSize": "500 ml",
         "packSize": "1 Unit"
       }
     ]
@@ -217,18 +308,25 @@ export const products: Product[] = [
     ],
     "skus": [
       {
-        "id": "coxiguard-std",
-        "name": "Standard Pack",
+        "id": "coxiguard-0",
+        "name": "80 mg",
         "code": "COX-1",
-        "unitSize": "Standard",
+        "unitSize": "80 mg",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "coxiguard-1",
+        "name": "100 mg",
+        "code": "COX-2",
+        "unitSize": "100 mg",
         "packSize": "1 Unit"
       }
     ]
   },
   {
-    "id": "diaronil-bolus",
-    "slug": "diaronil-bolus",
-    "name": "Diaronil Bolus",
+    "id": "diaronil",
+    "slug": "diaronil",
+    "name": "Diaronil",
     "category": "Livestock",
     "description": "High quality Livestock product by Amicizia Life Science.",
     "composition": "",
@@ -240,10 +338,10 @@ export const products: Product[] = [
     ],
     "skus": [
       {
-        "id": "diaronil-bolus-std",
-        "name": "Standard Pack",
+        "id": "diaronil-0",
+        "name": "4's strip",
         "code": "DIA-1",
-        "unitSize": "Standard",
+        "unitSize": "4's strip",
         "packSize": "1 Unit"
       }
     ]
@@ -264,17 +362,24 @@ export const products: Product[] = [
     "skus": [
       {
         "id": "enciflox-0",
-        "name": "50 Gm Sachet",
+        "name": "50 mg",
         "code": "ENC-1",
-        "unitSize": "50 Gm Sachet",
+        "unitSize": "50 mg",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "enciflox-1",
+        "name": "100 mg",
+        "code": "ENC-2",
+        "unitSize": "100 mg",
         "packSize": "1 Unit"
       }
     ]
   },
   {
-    "id": "fenvet-tablets",
-    "slug": "fenvet-tablets",
-    "name": "Fenvet Tablets",
+    "id": "fenvet",
+    "slug": "fenvet",
+    "name": "Fenvet",
     "category": "Livestock",
     "description": "High quality Livestock product by Amicizia Life Science.",
     "composition": "",
@@ -286,18 +391,25 @@ export const products: Product[] = [
     ],
     "skus": [
       {
-        "id": "fenvet-tablets-std",
-        "name": "Standard Pack",
+        "id": "fenvet-0",
+        "name": "1.5 mg",
         "code": "FEN-1",
-        "unitSize": "Standard",
+        "unitSize": "1.5 mg",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "fenvet-1",
+        "name": "150 mg",
+        "code": "FEN-2",
+        "unitSize": "150 mg",
         "packSize": "1 Unit"
       }
     ]
   },
   {
-    "id": "floxin-l",
-    "slug": "floxin-l",
-    "name": "Floxin L",
+    "id": "floxin",
+    "slug": "floxin",
+    "name": "Floxin",
     "category": "Livestock",
     "description": "High quality Livestock product by Amicizia Life Science.",
     "composition": "",
@@ -309,10 +421,24 @@ export const products: Product[] = [
     ],
     "skus": [
       {
-        "id": "floxin-l-std",
-        "name": "Standard Pack",
+        "id": "floxin-0",
+        "name": "1 L",
         "code": "FLO-1",
-        "unitSize": "Standard",
+        "unitSize": "1 L",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "floxin-1",
+        "name": "100 ml",
+        "code": "FLO-2",
+        "unitSize": "100 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "floxin-2",
+        "name": "500 ml",
+        "code": "FLO-3",
+        "unitSize": "500 ml",
         "packSize": "1 Unit"
       }
     ]
@@ -332,10 +458,24 @@ export const products: Product[] = [
     ],
     "skus": [
       {
-        "id": "gout-null-std",
-        "name": "Standard Pack",
+        "id": "gout-null-0",
+        "name": "250 ml",
         "code": "GOU-1",
-        "unitSize": "Standard",
+        "unitSize": "250 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "gout-null-1",
+        "name": "500 ml",
+        "code": "GOU-2",
+        "unitSize": "500 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "gout-null-2",
+        "name": "1 L",
+        "code": "GOU-3",
+        "unitSize": "1 L",
         "packSize": "1 Unit"
       }
     ]
@@ -356,23 +496,30 @@ export const products: Product[] = [
     "skus": [
       {
         "id": "grow-best-0",
-        "name": "500 ml.",
+        "name": "250 ml",
         "code": "GRO-1",
-        "unitSize": "500 ml.",
+        "unitSize": "250 ml",
         "packSize": "1 Unit"
       },
       {
         "id": "grow-best-1",
-        "name": "1 ltr.",
+        "name": "500 ml",
         "code": "GRO-2",
-        "unitSize": "1 ltr.",
+        "unitSize": "500 ml",
         "packSize": "1 Unit"
       },
       {
         "id": "grow-best-2",
-        "name": "5 ltr.",
+        "name": "1 L",
         "code": "GRO-3",
-        "unitSize": "5 ltr.",
+        "unitSize": "1 L",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "grow-best-3",
+        "name": "5 L",
+        "code": "GRO-4",
+        "unitSize": "5 L",
         "packSize": "1 Unit"
       }
     ]
@@ -380,7 +527,7 @@ export const products: Product[] = [
   {
     "id": "growbest-power",
     "slug": "growbest-power",
-    "name": "GrowBest Power",
+    "name": "Grow-Best Power",
     "category": "Livestock",
     "description": "High quality Livestock product by Amicizia Life Science.",
     "composition": "",
@@ -392,10 +539,31 @@ export const products: Product[] = [
     ],
     "skus": [
       {
-        "id": "growbest-power-std",
-        "name": "Standard Pack",
+        "id": "growbest-power-0",
+        "name": "250 ml",
         "code": "GRO-1",
-        "unitSize": "Standard",
+        "unitSize": "250 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "growbest-power-1",
+        "name": "500 ml",
+        "code": "GRO-2",
+        "unitSize": "500 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "growbest-power-2",
+        "name": "1 L",
+        "code": "GRO-3",
+        "unitSize": "1 L",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "growbest-power-3",
+        "name": "5 L",
+        "code": "GRO-4",
+        "unitSize": "5 L",
         "packSize": "1 Unit"
       }
     ]
@@ -416,9 +584,16 @@ export const products: Product[] = [
     "skus": [
       {
         "id": "gumbo-null-0",
-        "name": "250ml",
+        "name": "500 ml",
         "code": "GUM-1",
-        "unitSize": "250ml",
+        "unitSize": "500 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "gumbo-null-1",
+        "name": "1 L",
+        "code": "GUM-2",
+        "unitSize": "1 L",
         "packSize": "1 Unit"
       }
     ]
@@ -439,9 +614,16 @@ export const products: Product[] = [
     "skus": [
       {
         "id": "ibh-shield-0",
-        "name": "500ml",
+        "name": "500 ml",
         "code": "IBH-1",
-        "unitSize": "500ml",
+        "unitSize": "500 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "ibh-shield-1",
+        "name": "1 L",
+        "code": "IBH-2",
+        "unitSize": "1 L",
         "packSize": "1 Unit"
       }
     ]
@@ -462,15 +644,22 @@ export const products: Product[] = [
     "skus": [
       {
         "id": "immune-0",
-        "name": "100 ml",
+        "name": "1 L",
         "code": "IMM-1",
-        "unitSize": "100 ml",
+        "unitSize": "1 L",
         "packSize": "1 Unit"
       },
       {
         "id": "immune-1",
-        "name": "500 ml",
+        "name": "100 ml",
         "code": "IMM-2",
+        "unitSize": "100 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "immune-2",
+        "name": "500 ml",
+        "code": "IMM-3",
         "unitSize": "500 ml",
         "packSize": "1 Unit"
       }
@@ -515,16 +704,30 @@ export const products: Product[] = [
     "skus": [
       {
         "id": "iroliv-0",
-        "name": "1 kg.",
+        "name": "1 L",
         "code": "IRO-1",
-        "unitSize": "1 kg.",
+        "unitSize": "1 L",
         "packSize": "1 Unit"
       },
       {
         "id": "iroliv-1",
-        "name": "5 kg.Improves Productivity by optimizing FCR",
+        "name": "100 ml",
         "code": "IRO-2",
-        "unitSize": "5 kg.Improves Productivity by optimizing FCR",
+        "unitSize": "100 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "iroliv-2",
+        "name": "500 ml",
+        "code": "IRO-3",
+        "unitSize": "500 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "iroliv-3",
+        "name": "5 L",
+        "code": "IRO-4",
+        "unitSize": "5 L",
         "packSize": "1 Unit"
       }
     ]
@@ -568,23 +771,23 @@ export const products: Product[] = [
     "skus": [
       {
         "id": "iroliv-power-0",
-        "name": "5kg",
+        "name": "1 kg",
         "code": "IRO-1",
-        "unitSize": "5kg",
+        "unitSize": "1 kg",
         "packSize": "1 Unit"
       },
       {
         "id": "iroliv-power-1",
-        "name": "1 kg.",
+        "name": "2 kg",
         "code": "IRO-2",
-        "unitSize": "1 kg.",
+        "unitSize": "2 kg",
         "packSize": "1 Unit"
       },
       {
         "id": "iroliv-power-2",
-        "name": "5 kg.Improves Productivity by optimizing FCR",
+        "name": "5 kg",
         "code": "IRO-3",
-        "unitSize": "5 kg.Improves Productivity by optimizing FCR",
+        "unitSize": "5 kg",
         "packSize": "1 Unit"
       }
     ]
@@ -605,9 +808,37 @@ export const products: Product[] = [
     "skus": [
       {
         "id": "kalshine-gold-0",
-        "name": "5lts",
+        "name": "1 L",
         "code": "KAL-1",
-        "unitSize": "5lts",
+        "unitSize": "1 L",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "kalshine-gold-1",
+        "name": "2 L",
+        "code": "KAL-2",
+        "unitSize": "2 L",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "kalshine-gold-2",
+        "name": "5 L",
+        "code": "KAL-3",
+        "unitSize": "5 L",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "kalshine-gold-3",
+        "name": "10 L",
+        "code": "KAL-4",
+        "unitSize": "10 L",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "kalshine-gold-4",
+        "name": "500 ml",
+        "code": "KAL-5",
+        "unitSize": "500 ml",
         "packSize": "1 Unit"
       }
     ]
@@ -651,9 +882,16 @@ export const products: Product[] = [
     "skus": [
       {
         "id": "more-grow-0",
-        "name": "500gm",
+        "name": "1 kg",
         "code": "MOR-1",
-        "unitSize": "500gm",
+        "unitSize": "1 kg",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "more-grow-1",
+        "name": "500 mg",
+        "code": "MOR-2",
+        "unitSize": "500 mg",
         "packSize": "1 Unit"
       }
     ]
@@ -674,16 +912,16 @@ export const products: Product[] = [
     "skus": [
       {
         "id": "more-pork-0",
-        "name": "100gm",
+        "name": "100 mg",
         "code": "MOR-1",
-        "unitSize": "100gm",
+        "unitSize": "100 mg",
         "packSize": "1 Unit"
       },
       {
         "id": "more-pork-1",
-        "name": "500 gm",
+        "name": "500 mg",
         "code": "MOR-2",
-        "unitSize": "500 gm",
+        "unitSize": "500 mg",
         "packSize": "1 Unit"
       },
       {
@@ -695,9 +933,9 @@ export const products: Product[] = [
       },
       {
         "id": "more-pork-3",
-        "name": "5 KgCreate a Circle of Fence around your farm.TM",
+        "name": "30 kg",
         "code": "MOR-4",
-        "unitSize": "5 KgCreate a Circle of Fence around your farm.TM",
+        "unitSize": "30 kg",
         "packSize": "1 Unit"
       }
     ]
@@ -718,9 +956,9 @@ export const products: Product[] = [
     "skus": [
       {
         "id": "neoxy-forte-0",
-        "name": "50gm",
+        "name": "50 mg",
         "code": "NEO-1",
-        "unitSize": "50gm",
+        "unitSize": "50 mg",
         "packSize": "1 Unit"
       }
     ]
@@ -740,18 +978,25 @@ export const products: Product[] = [
     ],
     "skus": [
       {
-        "id": "no-coli-std",
-        "name": "Standard Pack",
-        "code": "NO -1",
-        "unitSize": "Standard",
+        "id": "no-coli-0",
+        "name": "500 ml",
+        "code": "NO--1",
+        "unitSize": "500 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "no-coli-1",
+        "name": "1 L",
+        "code": "NO--2",
+        "unitSize": "1 L",
         "packSize": "1 Unit"
       }
     ]
   },
   {
-    "id": "oxy-gold-bolus",
-    "slug": "oxy-gold-bolus",
-    "name": "Oxy Gold Bolus",
+    "id": "oxygold",
+    "slug": "oxygold",
+    "name": "Oxygold",
     "category": "Livestock",
     "description": "Follow up therapy after Antibiotic InjectionAs Pessary :In the prevention and treatment of infection following Parturation,Dystokia, Abortion, Retention of Placenta, Metritis, Pyometra & Cervicitis.",
     "composition": "Each uncoated Bolus ContainsOxytetracyclin Hydrochloride IP :500 Mg",
@@ -763,10 +1008,10 @@ export const products: Product[] = [
     ],
     "skus": [
       {
-        "id": "oxy-gold-bolus-0",
-        "name": "10 × 4 Boli",
+        "id": "oxygold-0",
+        "name": "4's strip",
         "code": "OXY-1",
-        "unitSize": "10 × 4 Boli",
+        "unitSize": "4's strip",
         "packSize": "1 Unit"
       }
     ]
@@ -786,10 +1031,10 @@ export const products: Product[] = [
     ],
     "skus": [
       {
-        "id": "oxy-vetgold-std",
-        "name": "Standard Pack",
+        "id": "oxy-vetgold-0",
+        "name": "100 mg",
         "code": "OXY-1",
-        "unitSize": "Standard",
+        "unitSize": "100 mg",
         "packSize": "1 Unit"
       }
     ]
@@ -810,30 +1055,23 @@ export const products: Product[] = [
     "skus": [
       {
         "id": "pgf-0",
-        "name": "250 gm",
-        "code": "PGF-1",
-        "unitSize": "250 gm",
-        "packSize": "1 Unit"
-      },
-      {
-        "id": "pgf-1",
-        "name": "500 gm",
-        "code": "PGF-2",
-        "unitSize": "500 gm",
-        "packSize": "1 Unit"
-      },
-      {
-        "id": "pgf-2",
         "name": "1 kg",
-        "code": "PGF-3",
+        "code": "PGF-1",
         "unitSize": "1 kg",
         "packSize": "1 Unit"
       },
       {
-        "id": "pgf-3",
-        "name": "4 litre of water .Equipment cleaning: 1.25 ml",
-        "code": "PGF-4",
-        "unitSize": "4 litre of water .Equipment cleaning: 1.25 ml",
+        "id": "pgf-1",
+        "name": "250 mg",
+        "code": "PGF-2",
+        "unitSize": "250 mg",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "pgf-2",
+        "name": "500 mg",
+        "code": "PGF-3",
+        "unitSize": "500 mg",
         "packSize": "1 Unit"
       }
     ]
@@ -854,9 +1092,9 @@ export const products: Product[] = [
     "skus": [
       {
         "id": "pipzin-vet-0",
-        "name": "30ml",
+        "name": "30 ml",
         "code": "PIP-1",
-        "unitSize": "30ml",
+        "unitSize": "30 ml",
         "packSize": "1 Unit"
       }
     ]
@@ -877,17 +1115,24 @@ export const products: Product[] = [
     "skus": [
       {
         "id": "primasol-0",
-        "name": "500ml",
+        "name": "100 ml",
         "code": "PRI-1",
-        "unitSize": "500ml",
+        "unitSize": "100 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "primasol-1",
+        "name": "500 ml",
+        "code": "PRI-2",
+        "unitSize": "500 ml",
         "packSize": "1 Unit"
       }
     ]
   },
   {
-    "id": "pyronull-bolus",
-    "slug": "pyronull-bolus",
-    "name": "Pyronull Bolus",
+    "id": "pyronull",
+    "slug": "pyronull",
+    "name": "Pyronull",
     "category": "Livestock",
     "description": "High quality Livestock product by Amicizia Life Science.",
     "composition": "",
@@ -899,10 +1144,10 @@ export const products: Product[] = [
     ],
     "skus": [
       {
-        "id": "pyronull-bolus-std",
-        "name": "Standard Pack",
+        "id": "pyronull-0",
+        "name": "4's strip",
         "code": "PYR-1",
-        "unitSize": "Standard",
+        "unitSize": "4's strip",
         "packSize": "1 Unit"
       }
     ]
@@ -927,79 +1172,51 @@ export const products: Product[] = [
     "skus": [
       {
         "id": "safety-vet-0",
-        "name": "1.125gm",
+        "name": "1.125 mg",
         "code": "SAF-1",
-        "unitSize": "1.125gm",
+        "unitSize": "1.125 mg",
         "packSize": "1 Unit"
       },
       {
         "id": "safety-vet-1",
-        "name": "125gm",
-        "code": "SAF-2",
-        "unitSize": "125gm",
-        "packSize": "1 Unit"
-      },
-      {
-        "id": "safety-vet-2",
-        "name": "1gm",
-        "code": "SAF-3",
-        "unitSize": "1gm",
-        "packSize": "1 Unit"
-      },
-      {
-        "id": "safety-vet-3",
-        "name": "250gm",
-        "code": "SAF-4",
-        "unitSize": "250gm",
-        "packSize": "1 Unit"
-      },
-      {
-        "id": "safety-vet-4",
-        "name": "2gm",
-        "code": "SAF-5",
-        "unitSize": "2gm",
-        "packSize": "1 Unit"
-      },
-      {
-        "id": "safety-vet-5",
         "name": "125 mg",
-        "code": "SAF-6",
+        "code": "SAF-2",
         "unitSize": "125 mg",
         "packSize": "1 Unit"
       },
       {
-        "id": "safety-vet-6",
+        "id": "safety-vet-2",
+        "name": "1 mg",
+        "code": "SAF-3",
+        "unitSize": "1 mg",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "safety-vet-3",
         "name": "250 mg",
-        "code": "SAF-7",
+        "code": "SAF-4",
         "unitSize": "250 mg",
         "packSize": "1 Unit"
       },
       {
-        "id": "safety-vet-7",
+        "id": "safety-vet-4",
+        "name": "2 mg",
+        "code": "SAF-5",
+        "unitSize": "2 mg",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "safety-vet-5",
         "name": "500 mg",
-        "code": "SAF-8",
+        "code": "SAF-6",
         "unitSize": "500 mg",
         "packSize": "1 Unit"
       },
       {
-        "id": "safety-vet-8",
-        "name": "1 gm",
-        "code": "SAF-9",
-        "unitSize": "1 gm",
-        "packSize": "1 Unit"
-      },
-      {
-        "id": "safety-vet-9",
-        "name": "2 gm",
-        "code": "SAF-10",
-        "unitSize": "2 gm",
-        "packSize": "1 Unit"
-      },
-      {
-        "id": "safety-vet-10",
-        "name": "3 gm MOST TRUSTED",
-        "code": "SAF-11",
-        "unitSize": "3 gm MOST TRUSTED",
+        "id": "safety-vet-6",
+        "name": "3 mg",
+        "code": "SAF-7",
+        "unitSize": "3 mg",
         "packSize": "1 Unit"
       }
     ]
@@ -1258,5 +1475,333 @@ export const products: Product[] = [
         "packSize": "1 Unit"
       }
     ]
+  },
+  {
+    "id": "amido",
+    "slug": "amido",
+    "name": "Amido",
+    "category": "Livestock",
+    "description": "Amido by Amicizia Life Science.",
+    "composition": "",
+    "indications": "",
+    "dosage": "",
+    "packaging": "Standard Packaging",
+    "images": [
+      "/images/products/Amido.png"
+    ],
+    "skus": [
+      {
+        "id": "amido-0",
+        "name": "1 ml",
+        "code": "AMI-1",
+        "unitSize": "1 ml",
+        "packSize": "1 Unit"
+      }
+    ]
+  },
+  {
+    "id": "amixin",
+    "slug": "amixin",
+    "name": "Amixin",
+    "category": "Livestock",
+    "description": "Amixin by Amicizia Life Science.",
+    "composition": "",
+    "indications": "",
+    "dosage": "",
+    "packaging": "Standard Packaging",
+    "images": [],
+    "skus": [
+      {
+        "id": "amixin-0",
+        "name": "20 mg",
+        "code": "AMI-1",
+        "unitSize": "20 mg",
+        "packSize": "1 Unit"
+      }
+    ]
+  },
+  {
+    "id": "avical",
+    "slug": "avical",
+    "name": "Avical",
+    "category": "Livestock",
+    "description": "Avical by Amicizia Life Science.",
+    "composition": "",
+    "indications": "",
+    "dosage": "",
+    "packaging": "Standard Packaging",
+    "images": [],
+    "skus": [
+      {
+        "id": "avical-0",
+        "name": "1 L",
+        "code": "AVI-1",
+        "unitSize": "1 L",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "avical-1",
+        "name": "100 ml",
+        "code": "AVI-2",
+        "unitSize": "100 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "avical-2",
+        "name": "500 ml",
+        "code": "AVI-3",
+        "unitSize": "500 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "avical-3",
+        "name": "5 L",
+        "code": "AVI-4",
+        "unitSize": "5 L",
+        "packSize": "1 Unit"
+      }
+    ]
+  },
+  {
+    "id": "darmel",
+    "slug": "darmel",
+    "name": "Darmel",
+    "category": "Livestock",
+    "description": "Darmel by Amicizia Life Science.",
+    "composition": "",
+    "indications": "",
+    "dosage": "",
+    "packaging": "Standard Packaging",
+    "images": [],
+    "skus": [
+      {
+        "id": "darmel-0",
+        "name": "50 mg",
+        "code": "DAR-1",
+        "unitSize": "50 mg",
+        "packSize": "1 Unit"
+      }
+    ]
+  },
+  {
+    "id": "deltrin",
+    "slug": "deltrin",
+    "name": "Deltrin",
+    "category": "Livestock",
+    "description": "Deltrin by Amicizia Life Science.",
+    "composition": "",
+    "indications": "",
+    "dosage": "",
+    "packaging": "Standard Packaging",
+    "images": [],
+    "skus": [
+      {
+        "id": "deltrin-0",
+        "name": "5 mg",
+        "code": "DEL-1",
+        "unitSize": "5 mg",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "deltrin-1",
+        "name": "50 mg",
+        "code": "DEL-2",
+        "unitSize": "50 mg",
+        "packSize": "1 Unit"
+      }
+    ]
+  },
+  {
+    "id": "farmsafe",
+    "slug": "farmsafe",
+    "name": "Farmsafe",
+    "category": "Livestock",
+    "description": "Farmsafe by Amicizia Life Science.",
+    "composition": "",
+    "indications": "",
+    "dosage": "",
+    "packaging": "Standard Packaging",
+    "images": [],
+    "skus": [
+      {
+        "id": "farmsafe-0",
+        "name": "1 L",
+        "code": "FAR-1",
+        "unitSize": "1 L",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "farmsafe-1",
+        "name": "250 ml",
+        "code": "FAR-2",
+        "unitSize": "250 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "farmsafe-2",
+        "name": "500 ml",
+        "code": "FAR-3",
+        "unitSize": "500 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "farmsafe-3",
+        "name": "5 L",
+        "code": "FAR-4",
+        "unitSize": "5 L",
+        "packSize": "1 Unit"
+      }
+    ]
+  },
+  {
+    "id": "furavet",
+    "slug": "furavet",
+    "name": "Furavet",
+    "category": "Livestock",
+    "description": "Furavet by Amicizia Life Science.",
+    "composition": "",
+    "indications": "",
+    "dosage": "",
+    "packaging": "Standard Packaging",
+    "images": [],
+    "skus": [
+      {
+        "id": "furavet-0",
+        "name": "50 mg",
+        "code": "FUR-1",
+        "unitSize": "50 mg",
+        "packSize": "1 Unit"
+      }
+    ]
+  },
+  {
+    "id": "good-habit",
+    "slug": "good-habit",
+    "name": "Good Habit",
+    "category": "Livestock",
+    "description": "Good Habit by Amicizia Life Science.",
+    "composition": "",
+    "indications": "",
+    "dosage": "",
+    "packaging": "Standard Packaging",
+    "images": [],
+    "skus": [
+      {
+        "id": "good-habit-0",
+        "name": "30 tabs",
+        "code": "GOO-1",
+        "unitSize": "30 tabs",
+        "packSize": "1 Unit"
+      }
+    ]
+  },
+  {
+    "id": "growbest-pet-gel",
+    "slug": "growbest-pet-gel",
+    "name": "Growbest Pet Gel",
+    "category": "Canine",
+    "description": "Growbest Pet Gel by Amicizia Life Science.",
+    "composition": "",
+    "indications": "",
+    "dosage": "",
+    "packaging": "Standard Packaging",
+    "images": [],
+    "skus": [
+      {
+        "id": "growbest-pet-gel-0",
+        "name": "200 mg",
+        "code": "GRO-1",
+        "unitSize": "200 mg",
+        "packSize": "1 Unit"
+      }
+    ]
+  },
+  {
+    "id": "orasol",
+    "slug": "orasol",
+    "name": "Orasol",
+    "category": "Livestock",
+    "description": "Orasol by Amicizia Life Science.",
+    "composition": "",
+    "indications": "",
+    "dosage": "",
+    "packaging": "Standard Packaging",
+    "images": [],
+    "skus": [
+      {
+        "id": "orasol-0",
+        "name": "1 L",
+        "code": "ORA-1",
+        "unitSize": "1 L",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "orasol-1",
+        "name": "250 ml",
+        "code": "ORA-2",
+        "unitSize": "250 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "orasol-2",
+        "name": "500 ml",
+        "code": "ORA-3",
+        "unitSize": "500 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "orasol-3",
+        "name": "5 L",
+        "code": "ORA-4",
+        "unitSize": "5 L",
+        "packSize": "1 Unit"
+      }
+    ]
+  },
+  {
+    "id": "piggo-csfend",
+    "slug": "piggo-csfend",
+    "name": "Piggo csfEND",
+    "category": "Livestock",
+    "description": "Piggo csfEND by Amicizia Life Science.",
+    "composition": "",
+    "indications": "",
+    "dosage": "",
+    "packaging": "Standard Packaging",
+    "images": [
+      "/images/products/Piggo CSFend.png"
+    ],
+    "skus": [
+      {
+        "id": "piggo-csfend-0",
+        "name": "100 ml",
+        "code": "PIG-1",
+        "unitSize": "100 ml",
+        "packSize": "1 Unit"
+      }
+    ]
+  },
+  {
+    "id": "piggo-farmsafe",
+    "slug": "piggo-farmsafe",
+    "name": "Piggo Farmsafe",
+    "category": "Livestock",
+    "description": "Piggo Farmsafe by Amicizia Life Science.",
+    "composition": "",
+    "indications": "",
+    "dosage": "",
+    "packaging": "Standard Packaging",
+    "images": [
+      "/images/products/Piggo Farmsafe.jpeg"
+    ],
+    "skus": [
+      {
+        "id": "piggo-farmsafe-0",
+        "name": "100 ml",
+        "code": "PIG-1",
+        "unitSize": "100 ml",
+        "packSize": "1 Unit"
+      }
+    ]
   }
-];
+];;

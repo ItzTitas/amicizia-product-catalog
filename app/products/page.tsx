@@ -2,9 +2,10 @@ import Link from "next/link";
 import NextImage from "next/image";
 import { products, categories } from "@/lib/products";
 import { ProductSearch } from "@/components/product/ProductSearch";
+import { ProductSort } from "@/components/product/ProductSort";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "lucide-react"; // Import Badge if available, else plain div
+import { Badge, Package2 } from "lucide-react"; // Import Badge if available, else plain div
 
 export const dynamic = 'force-dynamic';
 
@@ -30,6 +31,14 @@ export default async function ProductsPage({
             (p.composition && p.composition.toLowerCase().includes(searchTerm)) ||
             (p.indications && p.indications.toLowerCase().includes(searchTerm))
         );
+    }
+
+    const sortOption = typeof resolvedParams.sort === 'string' ? resolvedParams.sort : 'relevant';
+
+    if (sortOption === 'alphabetical') {
+        filteredProducts.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (sortOption === 'reverse-alphabetical') {
+        filteredProducts.sort((a, b) => b.name.localeCompare(a.name));
     }
 
     return (
@@ -68,19 +77,28 @@ export default async function ProductsPage({
                                 Showing {filteredProducts.length} results
                             </p>
                         </div>
-                        <ProductSearch />
+                        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto items-center">
+                            <ProductSearch />
+                            <ProductSort />
+                        </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {filteredProducts.map((product) => (
                             <Card key={product.id} className="flex flex-col overflow-hidden hover:shadow-md transition-shadow">
                                 <div className="aspect-[4/3] bg-muted relative">
-                                    <NextImage
-                                        src={product.images[0]}
-                                        alt={product.name}
-                                        fill
-                                        className="object-cover"
-                                    />
+                                    {product.images && product.images.length > 0 ? (
+                                        <NextImage
+                                            src={product.images[0]}
+                                            alt={product.name}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    ) : (
+                                        <div className="w-full h-full flex items-center justify-center bg-gray-100 text-muted-foreground">
+                                            <Package2 className="h-10 w-10 opacity-20" />
+                                        </div>
+                                    )}
                                 </div>
                                 <CardHeader>
                                     <div className="text-sm font-medium text-primary mb-1">{product.category}</div>

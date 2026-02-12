@@ -78,7 +78,9 @@ export function Header() {
                 </div>
                 <div className="flex items-center gap-2">
                     <CartSheet />
-                    <Button className="hidden md:flex">Contact Sales</Button>
+                    <Link href="/contact">
+                        <Button className="hidden md:flex">Contact Sales</Button>
+                    </Link>
                 </div>
             </div>
         </header>
