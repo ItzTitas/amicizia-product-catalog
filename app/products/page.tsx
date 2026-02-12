@@ -105,6 +105,7 @@ export default async function ProductsPage({
                                         {cat === 'Aqua' && '🐟'}
                                         {cat === 'Homeopathy' && '🌿'}
                                         {cat === 'Over the Counter' && '💊'}
+                                        {cat === 'Pet' && '🐾'}
                                         {cat}
                                     </Link>
                                 ))}
@@ -162,6 +163,7 @@ export default async function ProductsPage({
                                                         ${cat === 'Aqua' ? 'bg-gradient-to-r from-cyan-400 to-blue-500' : ''}
                                                         ${cat === 'Homeopathy' ? 'bg-gradient-to-r from-lime-400 to-emerald-500' : ''}
                                                         ${cat === 'Over the Counter' ? 'bg-gradient-to-r from-amber-400 to-orange-500' : ''}
+                                                        ${cat === 'Pet' ? 'bg-gradient-to-r from-indigo-400 to-blue-500' : ''}
                                                         text-white font-bold shadow-lg backdrop-blur-sm border-0
                                                     `}>
                                                         {cat}

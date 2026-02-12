@@ -60,6 +60,8 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                 return 'from-lime-400 to-emerald-500';
             case 'Over the Counter':
                 return 'from-amber-400 to-orange-500';
+            case 'Pet':
+                return 'from-indigo-400 to-blue-500';
             default:
                 return 'from-teal-400 to-cyan-500';
         }

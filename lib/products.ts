@@ -1,4 +1,4 @@
-export type Category = "Livestock" | "Poultry" | "Canine" | "Swine" | "Aqua" | "Homeopathy" | "Over the Counter";
+export type Category = "Livestock" | "Poultry" | "Canine" | "Swine" | "Aqua" | "Homeopathy" | "Over the Counter" | "Pet";
 
 export interface SKU {
   id: string;
@@ -24,7 +24,7 @@ export interface Product {
   skus: SKU[];
 }
 
-export const categories: Category[] = ["Livestock", "Poultry", "Canine", "Swine", "Aqua", "Homeopathy", "Over the Counter"];
+export const categories: Category[] = ["Livestock", "Poultry", "Canine", "Swine", "Aqua", "Pet", "Homeopathy", "Over the Counter"];
 
 export const products: Product[] = [
   {
