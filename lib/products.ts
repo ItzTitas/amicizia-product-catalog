@@ -1162,9 +1162,7 @@ export const products: Product[] = [
     "indications": "Gastrointestinal tract infections\nRespiratory tract infections\nGenital & urinary tract infections\nSkin, wound, joint & bone infections\nSepticaemia, bacteraemia",
     "dosage": "5mg to 10mg per kg Body weight by IV/IM route for 3 to 5 days or as advised by V eterinarian.",
     "packaging": "Standard Packaging",
-    "images": [
-      "/Products Amicizia/Safety Vet.png"
-    ],
+    "images": [],
     "skus": [
       {
         "id": "safety-vet-0",
@@ -1227,9 +1225,7 @@ export const products: Product[] = [
     "indications": "Severe respiratory infections (HS, pneumonia, bronchitis)\nUrogenital infections (metritis, endometritis, pyometra)\nMastitis\nAbscesses & maggoted wounds\nSepticaemia",
     "dosage": "5 to 10mg per kg Body weight by IV/IM route for 3 to 5 days or as advised by V eterinarian.",
     "packaging": "Standard Packaging",
-    "images": [
-      "/Products Amicizia/Safety Vet Plus.png"
-    ],
+    "images": [],
     "skus": [
       {
         "id": "safety-vet-plus-0",
