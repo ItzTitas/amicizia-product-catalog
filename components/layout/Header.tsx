@@ -23,7 +23,7 @@ export function Header() {
                                     href="/"
                                     className="flex items-center gap-2 text-lg font-semibold"
                                 >
-                                    <Package2 className="h-6 w-6" />
+                                    <img src="/logo.png" alt="Amicizia Life Science" className="h-8 w-8" />
                                     <span className="sr-only">Amicizia Life Science</span>
                                 </Link>
                                 <a href="https://amicizialifescience.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
@@ -79,7 +79,7 @@ export function Header() {
                 <div className="flex items-center gap-2">
                     <CartSheet />
                     <Link href="/contact">
-                        <Button className="hidden md:flex">Contact Sales</Button>
+                        <Button className="hidden md:flex">Contact Us!</Button>
                     </Link>
                 </div>
             </div>

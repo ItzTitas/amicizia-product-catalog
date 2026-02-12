@@ -38,6 +38,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                 skuName: selectedSku.name,
                 unitSize: selectedSku.unitSize,
                 quantity: 1,
+                image: product.images?.[0],
             });
         }
     };

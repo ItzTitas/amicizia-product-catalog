@@ -8,6 +8,7 @@ export interface CartItem {
     skuName: string;
     unitSize: string;
     quantity: number;
+    image?: string;
 }
 
 interface CartState {

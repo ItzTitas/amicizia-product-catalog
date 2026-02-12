@@ -1371,9 +1371,9 @@ export const products: Product[] = [
     ]
   },
   {
-    "id": "wormnull",
-    "slug": "wormnull",
-    "name": "Wormnull",
+    "id": "wormnull-dp",
+    "slug": "wormnull-dp",
+    "name": "Wormnull-DP",
     "category": "Livestock",
     "description": "Albendazole is a synthetic Anthelmintic which belongs to the group of Benzimidazole derivatives and provides an action against a wide range of worms like Tapeworms (Cestodes), and Round worms,Pinworms, Whipworms, Hookworms, Filariae (Nematodes) and also against adult Fluke (T rematode) at higher dose. Ivermectin(A vermectin group) Infestations of Lice , Ticks, Mites and Scabies in Sheep, Goat, Cattle, Buf falo & Swine.",
     "composition": "Each 30 ml contains Albendazole (Micronised ) IP : 750 mg | Ivermectin IP : 25 Mg",
@@ -1563,9 +1563,9 @@ export const products: Product[] = [
     ]
   },
   {
-    "id": "darmel",
-    "slug": "darmel",
-    "name": "Darmel",
+    "id": "darmelo",
+    "slug": "darmelo",
+    "name": "Darmelo",
     "category": "Livestock",
     "description": "Darmel by Amicizia Life Science.",
     "composition": "",
@@ -1803,5 +1803,152 @@ export const products: Product[] = [
         "packSize": "1 Unit"
       }
     ]
+  },
+  {
+    "id": "deltrin-soap",
+    "slug": "deltrin-soap",
+    "name": "Deltrin Soap",
+    "category": "Livestock",
+    "description": "Deltrin Soap by Amicizia Life Science.",
+    "composition": "",
+    "indications": "",
+    "dosage": "",
+    "packaging": "Standard Packaging",
+    "images": [],
+    "skus": [
+      {
+        "id": "deltrin-soap-0",
+        "name": "75 gm",
+        "code": "DEL-S-1",
+        "unitSize": "75 gm",
+        "packSize": "1 Unit"
+      }
+    ]
+  },
+  {
+    "id": "piggo-iron-bloom",
+    "slug": "piggo-iron-bloom",
+    "name": "Piggo Iron Bloom",
+    "category": "Livestock",
+    "description": "Piggo Iron Bloom by Amicizia Life Science.",
+    "composition": "",
+    "indications": "",
+    "dosage": "",
+    "packaging": "Standard Packaging",
+    "images": [],
+    "skus": [
+      {
+        "id": "piggo-iron-bloom-0",
+        "name": "500 gm",
+        "code": "PIG-I-1",
+        "unitSize": "500 gm",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "piggo-iron-bloom-1",
+        "name": "1 kg",
+        "code": "PIG-I-2",
+        "unitSize": "1 kg",
+        "packSize": "1 Unit"
+      }
+    ]
+  },
+  {
+    "id": "piggo-swinocal",
+    "slug": "piggo-swinocal",
+    "name": "Piggo Swinocal",
+    "category": "Livestock",
+    "description": "Piggo Swinocal by Amicizia Life Science.",
+    "composition": "",
+    "indications": "",
+    "dosage": "",
+    "packaging": "Standard Packaging",
+    "images": [],
+    "skus": [
+      {
+        "id": "piggo-swinocal-0",
+        "name": "1 L",
+        "code": "PIG-S-1",
+        "unitSize": "1 L",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "piggo-swinocal-1",
+        "name": "5 L",
+        "code": "PIG-S-2",
+        "unitSize": "5 L",
+        "packSize": "1 Unit"
+      }
+    ]
+  },
+  {
+    "id": "piggo-swinoliv",
+    "slug": "piggo-swinoliv",
+    "name": "Piggo Swinoliv",
+    "category": "Livestock",
+    "description": "Piggo Swinoliv by Amicizia Life Science.",
+    "composition": "",
+    "indications": "",
+    "dosage": "",
+    "packaging": "Standard Packaging",
+    "images": [],
+    "skus": [
+      {
+        "id": "piggo-swinoliv-0",
+        "name": "1 L",
+        "code": "PIG-L-1",
+        "unitSize": "1 L",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "piggo-swinoliv-1",
+        "name": "5 L",
+        "code": "PIG-L-2",
+        "unitSize": "5 L",
+        "packSize": "1 Unit"
+      }
+    ]
+  },
+  {
+    "id": "shinofur-natural",
+    "slug": "shinofur-natural",
+    "name": "Shinofur Natural",
+    "category": "Livestock",
+    "description": "Shinofur Natural by Amicizia Life Science.",
+    "composition": "",
+    "indications": "",
+    "dosage": "",
+    "packaging": "Standard Packaging",
+    "images": [],
+    "skus": [
+      {
+        "id": "shinofur-natural-0",
+        "name": "75 gm",
+        "code": "SHI-N-1",
+        "unitSize": "75 gm",
+        "packSize": "1 Unit"
+      }
+    ]
+  },
+  {
+    "id": "shinofur-power",
+    "slug": "shinofur-power",
+    "name": "Shinofur Power",
+    "category": "Livestock",
+    "description": "Shinofur Power by Amicizia Life Science.",
+    "composition": "",
+    "indications": "",
+    "dosage": "",
+    "packaging": "Standard Packaging",
+    "images": [],
+    "skus": [
+      {
+        "id": "shinofur-power-0",
+        "name": "75 gm",
+        "code": "SHI-P-1",
+        "unitSize": "75 gm",
+        "packSize": "1 Unit"
+      }
+    ]
   }
-];;
+];

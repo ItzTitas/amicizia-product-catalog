@@ -1,11 +1,32 @@
+'use client';
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea"; // Assuming I need to create this or use standard textarea
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, MessageCircle } from "lucide-react";
+import { FormEvent } from "react";
 
 export default function ContactPage() {
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const formData = new FormData(e.currentTarget);
+        const firstName = formData.get('first-name');
+        const lastName = formData.get('last-name');
+        const email = formData.get('email');
+        const phone = formData.get('phone');
+        const message = formData.get('message');
+
+        const fullName = `${firstName} ${lastName}`.trim();
+
+        const whatsappMessage = `*New Inquiry from Website*\n\n*Name:* ${fullName}\n*Email:* ${email}\n*Phone:* ${phone}\n*Message:* ${message}`;
+        const encodedMessage = encodeURIComponent(whatsappMessage);
+
+        const phoneNumber = '918452006959';
+
+        window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+    };
+
     return (
         <div className="container mx-auto px-4 py-12 md:py-24">
             <div className="max-w-5xl mx-auto">
@@ -102,40 +123,41 @@ export default function ContactPage() {
                         <CardHeader>
                             <CardTitle>Send us a Message</CardTitle>
                             <CardDescription>
-                                Fill out the form below and we'll get back to you as soon as possible.
+                                Fill out the form below to start a WhatsApp chat with our team.
                             </CardDescription>
                         </CardHeader>
                         <CardContent>
-                            <form className="space-y-4">
+                            <form onSubmit={handleSubmit} className="space-y-4">
                                 <div className="grid grid-cols-2 gap-4">
                                     <div className="space-y-2">
                                         <Label htmlFor="first-name">First name</Label>
-                                        <Input id="first-name" placeholder="John" required />
+                                        <Input id="first-name" name="first-name" placeholder="John" required />
                                     </div>
                                     <div className="space-y-2">
                                         <Label htmlFor="last-name">Last name</Label>
-                                        <Input id="last-name" placeholder="Doe" required />
+                                        <Input id="last-name" name="last-name" placeholder="Doe" required />
                                     </div>
                                 </div>
                                 <div className="space-y-2">
                                     <Label htmlFor="email">Email</Label>
-                                    <Input id="email" type="email" placeholder="john@example.com" required />
+                                    <Input id="email" name="email" type="email" placeholder="john@example.com" required />
                                 </div>
                                 <div className="space-y-2">
                                     <Label htmlFor="phone">Phone</Label>
-                                    <Input id="phone" type="tel" placeholder="+91 98765 43210" />
+                                    <Input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" />
                                 </div>
                                 <div className="space-y-2">
                                     <Label htmlFor="message">Message</Label>
                                     <textarea
                                         id="message"
+                                        name="message"
                                         className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                                         placeholder="How can we help you?"
                                         required
                                     />
                                 </div>
-                                <Button type="submit" className="w-full">
-                                    Send Message
+                                <Button type="submit" className="w-full bg-green-600 hover:bg-green-700">
+                                    <MessageCircle className="mr-2 h-4 w-4" /> Chat on WhatsApp
                                 </Button>
                             </form>
                         </CardContent>

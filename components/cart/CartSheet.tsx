@@ -14,7 +14,8 @@ import {
     SheetTrigger,
     SheetFooter,
 } from '@/components/ui/sheet';
-import { ShoppingCart, Trash2, Plus, Minus } from 'lucide-react';
+import { ShoppingCart, Trash2, Plus, Minus, Package2 } from 'lucide-react';
+import Image from 'next/image';
 
 export function CartSheet() {
     const { items, removeItem, updateQuantity, clearCart, isOpen, setIsOpen } = useCartStore();
@@ -124,8 +125,19 @@ export function CartSheet() {
                             <div className="space-y-4">
                                 {items.map((item) => (
                                     <div key={item.skuId} className="flex gap-4 border-b pb-4">
-                                        <div className="h-16 w-16 bg-muted rounded flex items-center justify-center text-xs text-muted-foreground">
-                                            Img
+                                        <div className="h-16 w-16 relative bg-muted rounded overflow-hidden flex-shrink-0 border">
+                                            {item.image ? (
+                                                <Image
+                                                    src={item.image}
+                                                    alt={item.productName}
+                                                    fill
+                                                    className="object-cover"
+                                                />
+                                            ) : (
+                                                <div className="flex h-full w-full items-center justify-center bg-muted text-muted-foreground">
+                                                    <Package2 className="h-6 w-6 opacity-20" />
+                                                </div>
+                                            )}
                                         </div>
                                         <div className="flex-1">
                                             <h4 className="font-semibold text-sm">{item.productName}</h4>
