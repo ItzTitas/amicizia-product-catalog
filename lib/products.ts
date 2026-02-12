@@ -1306,7 +1306,7 @@ export const products: Product[] = [
   {
     "id": "ultraveet",
     "slug": "ultraveet",
-    "name": "Ultravit",
+    "name": "Ultraveet",
     "category": "Livestock",
     "description": "Multivitamin tonic and immunostimulant for improved growth and production.",
     "composition": "Each ml contains:\nVitamin A 50000 IU, Vitamin B12 25 mcg, Vitamin D3 6000 IU, Vitamin C 100 mg, Vitamin E 50 mg, Vitamin K 10 mg, Biotin 500 mcg",
@@ -1523,7 +1523,7 @@ export const products: Product[] = [
   {
     "id": "avical",
     "slug": "avical",
-    "name": "Av Cal Gold",
+    "name": "Avical",
     "category": "Livestock",
     "description": "High bioavailability calcium supplement fortified with Vitamin D3 and trace minerals.",
     "composition": "Calcium Lacto Gluconate 21%\nCalcium Lactobionate 14%\nVitamin D3 800 IU\nVitamin B12 10.5 mcg\nFerric Ammonium Citrate 167 mg\nZinc Sulphate 60 mg\nFolic Acid\nLysine",
