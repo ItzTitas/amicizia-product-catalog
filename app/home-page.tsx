@@ -13,7 +13,9 @@ export default function HomePage() {
     '/images/slide2.jpg',
     '/images/slide3.jpg',
     '/images/slide4.jpg',
-    '/images/slide5.jpg'
+    '/images/slide5.jpg',
+    '/images/slide6.jpg',
+    '/images/slide7.jpg'
   ];
 
   // Slideshow rotation

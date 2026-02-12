@@ -680,10 +680,10 @@ export const products: Product[] = [
     ],
     "skus": [
       {
-        "id": "immune-pet-std",
-        "name": "Standard Pack",
+        "id": "immune-pet-0",
+        "name": "200 ml",
         "code": "IMM-1",
-        "unitSize": "Standard",
+        "unitSize": "200 ml",
         "packSize": "1 Unit"
       }
     ]
@@ -1295,10 +1295,24 @@ export const products: Product[] = [
     ],
     "skus": [
       {
-        "id": "sulphaquin-gold-std",
-        "name": "Standard Pack",
+        "id": "sulphaquin-gold-0",
+        "name": "100 ml",
         "code": "SUL-1",
-        "unitSize": "Standard",
+        "unitSize": "100 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "sulphaquin-gold-1",
+        "name": "1 L",
+        "code": "SUL-2",
+        "unitSize": "1 L",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "sulphaquin-gold-2",
+        "name": "5 L",
+        "code": "SUL-3",
+        "unitSize": "5 L",
         "packSize": "1 Unit"
       }
     ]
@@ -1318,10 +1332,38 @@ export const products: Product[] = [
     ],
     "skus": [
       {
-        "id": "ultraveet-std",
-        "name": "Standard Pack",
+        "id": "ultraveet-0",
+        "name": "30 ml",
         "code": "ULT-1",
-        "unitSize": "Standard",
+        "unitSize": "30 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "ultraveet-1",
+        "name": "60 ml",
+        "code": "ULT-2",
+        "unitSize": "60 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "ultraveet-2",
+        "name": "100 ml",
+        "code": "ULT-3",
+        "unitSize": "100 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "ultraveet-3",
+        "name": "500 ml",
+        "code": "ULT-4",
+        "unitSize": "500 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "ultraveet-4",
+        "name": "1 L",
+        "code": "ULT-5",
+        "unitSize": "1 L",
         "packSize": "1 Unit"
       }
     ]
@@ -1422,10 +1464,10 @@ export const products: Product[] = [
     ],
     "skus": [
       {
-        "id": "zymoliv-gold-bolus-std",
-        "name": "Standard Pack",
+        "id": "zymoliv-gold-bolus-0",
+        "name": "4 x 1 strip",
         "code": "ZYM-1",
-        "unitSize": "Standard",
+        "unitSize": "4 x 1 strip",
         "packSize": "1 Unit"
       }
     ]
@@ -1445,10 +1487,31 @@ export const products: Product[] = [
     ],
     "skus": [
       {
-        "id": "zymoliv-gold-std",
-        "name": "Standard Pack",
+        "id": "zymoliv-gold-0",
+        "name": "200 ml",
         "code": "ZYM-1",
-        "unitSize": "Standard",
+        "unitSize": "200 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "zymoliv-gold-1",
+        "name": "500 ml",
+        "code": "ZYM-2",
+        "unitSize": "500 ml",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "zymoliv-gold-2",
+        "name": "1 L",
+        "code": "ZYM-3",
+        "unitSize": "1 L",
+        "packSize": "1 Unit"
+      },
+      {
+        "id": "zymoliv-gold-3",
+        "name": "5 L",
+        "code": "ZYM-4",
+        "unitSize": "5 L",
         "packSize": "1 Unit"
       }
     ]
@@ -1492,9 +1555,9 @@ export const products: Product[] = [
     "skus": [
       {
         "id": "amido-0",
-        "name": "1 ml",
+        "name": "10 ml",
         "code": "AMI-1",
-        "unitSize": "1 ml",
+        "unitSize": "10 ml",
         "packSize": "1 Unit"
       }
     ]
@@ -1520,48 +1583,7 @@ export const products: Product[] = [
       }
     ]
   },
-  {
-    "id": "avical",
-    "slug": "avical",
-    "name": "Avical",
-    "category": "Livestock",
-    "description": "Calcium-phosphorus supplement fortified with Vitamin D3 and herbal galactagogue.",
-    "composition": "Calcium – 3500 mg\nPhosphorus – 1750 mg\nVitamin D3 – 15000 IU\nChromium – 4 mg\nZinc – 100 mg\nCobalt chloride – 100 mg\nVitamin B12 – 200 mcg\nJivanti (Leptadenia reticulata) – 100 mg",
-    "indications": "Hypocalcaemia\nLactation support\nLow milk production\nStress",
-    "dosage": "",
-    "packaging": "Standard Packaging",
-    "images": [],
-    "skus": [
-      {
-        "id": "avical-0",
-        "name": "1 L",
-        "code": "AVI-1",
-        "unitSize": "1 L",
-        "packSize": "1 Unit"
-      },
-      {
-        "id": "avical-1",
-        "name": "100 ml",
-        "code": "AVI-2",
-        "unitSize": "100 ml",
-        "packSize": "1 Unit"
-      },
-      {
-        "id": "avical-2",
-        "name": "500 ml",
-        "code": "AVI-3",
-        "unitSize": "500 ml",
-        "packSize": "1 Unit"
-      },
-      {
-        "id": "avical-3",
-        "name": "5 L",
-        "code": "AVI-4",
-        "unitSize": "5 L",
-        "packSize": "1 Unit"
-      }
-    ]
-  },
+
   {
     "id": "darmelo",
     "slug": "darmelo",
