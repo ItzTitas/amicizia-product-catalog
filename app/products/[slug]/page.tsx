@@ -189,7 +189,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                             <div className="space-y-2">
                                 <h3 className="text-lg font-semibold">Indications</h3>
                                 <ul className="list-disc list-outside ml-5 text-muted-foreground space-y-1">
-                                    {product.indications.split('. ').map((item, i) => (
+                                    {product.indications.split(/[\n\r]+|\. /).map((item, i) => (
                                         item.trim() && <li key={i}>{item.trim().replace(/\.$/, '')}</li>
                                     ))}
                                 </ul>
