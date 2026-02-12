@@ -1950,5 +1950,28 @@ export const products: Product[] = [
         "packSize": "1 Unit"
       }
     ]
+  },
+  {
+    "id": "nulltix",
+    "slug": "nulltix",
+    "name": "Nulltix",
+    "category": "Livestock",
+    "description": "Nulltix by Amicizia Life Science.",
+    "composition": "",
+    "indications": "",
+    "dosage": "",
+    "packaging": "Standard Packaging",
+    "images": [
+      "/images/products/Nulltix.png"
+    ],
+    "skus": [
+      {
+        "id": "nulltix-0",
+        "name": "100 mg",
+        "code": "NUL-1",
+        "unitSize": "100 mg",
+        "packSize": "1 Unit"
+      }
+    ]
   }
 ];
