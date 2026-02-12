@@ -4,7 +4,7 @@ export function Footer() {
     return (
         <footer className="border-t bg-muted/40">
             <div className="container py-8 md:py-12">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 md:pl-8">
                     <div className="space-y-3">
                         <h4 className="text-lg font-bold text-primary">Amicizia Life Science</h4>
                         <p className="text-sm text-muted-foreground leading-relaxed">
@@ -35,7 +35,7 @@ export function Footer() {
                         <h4 className="font-semibold mb-4">Company</h4>
                         <ul className="space-y-2 text-sm text-muted-foreground">
                             <li>
-                                <a href="https://amicizialifescience.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
+                                <a href="/#contact-us" className="hover:text-primary">
                                     About Us
                                 </a>
                             </li>
