@@ -1,10 +1,14 @@
+'use client';
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { CartSheet } from "@/components/cart/CartSheet";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Package2 } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export function Header() {
+    const pathname = usePathname();
     return (
         <header className="sticky top-0 z-50 w-full transition-all duration-300">
             <div className="absolute inset-x-0 top-0 h-24 bg-white/70 backdrop-blur-xl border-b border-white/20 shadow-sm rounded-b-[2.5rem] supports-[backdrop-filter]:bg-white/60 z-[-1]"></div>
@@ -27,8 +31,8 @@ export function Header() {
                                     </span>
                                 </Link>
                                 <div className="flex flex-col gap-4 text-lg">
-                                    <a href="/" className="hover:text-primary transition-colors font-medium">Home</a>
-                                    <Link href="/products" className="hover:text-primary transition-colors font-medium">Products</Link>
+                                    <a href="/" className={`hover:text-primary transition-colors font-medium px-3 py-2 rounded-lg ${pathname === '/' ? 'bg-slate-900 text-white' : ''}`}>Home</a>
+                                    <Link href="/products" className={`hover:text-primary transition-colors font-medium px-3 py-2 rounded-lg ${pathname.startsWith('/products') ? 'bg-slate-900 text-white' : ''}`}>Products</Link>
 
                                     {/* Resources Section */}
                                     <div className="border-t pt-4">
@@ -46,8 +50,8 @@ export function Header() {
                                         </div>
                                     </div>
 
-                                    <a href="/#contact-us" className="hover:text-primary transition-colors font-medium">About Us</a>
-                                    <Link href="/contact" className="hover:text-primary transition-colors font-medium">Contact</Link>
+                                    <a href="/#contact-us" className="hover:text-primary transition-colors font-medium px-3 py-2 rounded-lg">About Us</a>
+                                    <Link href="/contact" className={`hover:text-primary transition-colors font-medium px-3 py-2 rounded-lg ${pathname === '/contact' ? 'bg-slate-900 text-white' : ''}`}>Contact</Link>
                                 </div>
                             </nav>
                         </SheetContent>
@@ -71,13 +75,19 @@ export function Header() {
                 <nav className="hidden lg:flex items-center gap-1 bg-white/50 px-2 py-1.5 rounded-full border border-white/40 shadow-sm backdrop-blur-md absolute left-1/2 -translate-x-1/2">
                     <Link
                         href="/"
-                        className="px-5 py-2 rounded-full text-sm font-medium text-foreground/80 hover:text-primary hover:bg-white hover:shadow-sm transition-all duration-300"
+                        className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${pathname === '/'
+                            ? 'bg-slate-900 text-white shadow-lg'
+                            : 'text-foreground/80 hover:text-primary hover:bg-white hover:shadow-sm'
+                            }`}
                     >
                         Home
                     </Link>
                     <Link
                         href="/products"
-                        className="px-5 py-2 rounded-full text-sm font-medium text-foreground/80 hover:text-primary hover:bg-white hover:shadow-sm transition-all duration-300"
+                        className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${pathname.startsWith('/products')
+                            ? 'bg-slate-900 text-white shadow-lg'
+                            : 'text-foreground/80 hover:text-primary hover:bg-white hover:shadow-sm'
+                            }`}
                     >
                         Products
                     </Link>

@@ -63,7 +63,11 @@ export function Footer() {
                                 www.amicizialifescience.com
                             </a>
                             <br />
-                            +91 8452006959 / +91 9007736959 / 033-65981914
+                            <a href="tel:+918452006959" className="hover:text-primary">+91 8452006959</a>
+                            {' / '}
+                            <a href="tel:+919007736959" className="hover:text-primary">+91 9007736959</a>
+                            {' / '}
+                            <a href="tel:03365981914" className="hover:text-primary">033-65981914</a>
                         </p>
                     </div>
                 </div>
