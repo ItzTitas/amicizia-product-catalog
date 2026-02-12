@@ -29,7 +29,24 @@ export function Header() {
                                 <div className="flex flex-col gap-4 text-lg">
                                     <a href="/" className="hover:text-primary transition-colors font-medium">Home</a>
                                     <Link href="/products" className="hover:text-primary transition-colors font-medium">Products</Link>
-                                    <a href="/about" className="hover:text-primary transition-colors font-medium">About Us</a>
+
+                                    {/* Resources Section */}
+                                    <div className="border-t pt-4">
+                                        <p className="text-sm font-semibold text-muted-foreground mb-2">Resources</p>
+                                        <div className="flex flex-col gap-3 pl-2">
+                                            <a href="/Cattle.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors text-base">
+                                                📄 Livestock Catalog
+                                            </a>
+                                            <a href="/Poultry.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors text-base">
+                                                📄 Poultry Catalog
+                                            </a>
+                                            <a href="/Canine_Literature-PDF.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors text-base">
+                                                📄 Canine Catalog
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <a href="/#contact-us" className="hover:text-primary transition-colors font-medium">About Us</a>
                                     <Link href="/contact" className="hover:text-primary transition-colors font-medium">Contact</Link>
                                 </div>
                             </nav>
@@ -52,20 +69,61 @@ export function Header() {
 
                 {/* Desktop Navigation - Centered Pill */}
                 <nav className="hidden lg:flex items-center gap-1 bg-white/50 px-2 py-1.5 rounded-full border border-white/40 shadow-sm backdrop-blur-md absolute left-1/2 -translate-x-1/2">
-                    {[
-                        { name: 'Home', href: 'https://amicizialifescience.com/' },
-                        { name: 'Products', href: '/products' },
-                        { name: 'About Us', href: 'https://amicizialifescience.com/' }
-                    ].map((item) => (
-                        <Link
-                            key={item.name}
-                            href={item.href}
-                            target={item.href.startsWith('http') ? "_blank" : undefined}
-                            className="px-5 py-2 rounded-full text-sm font-medium text-foreground/80 hover:text-primary hover:bg-white hover:shadow-sm transition-all duration-300"
-                        >
-                            {item.name}
-                        </Link>
-                    ))}
+                    <Link
+                        href="/"
+                        className="px-5 py-2 rounded-full text-sm font-medium text-foreground/80 hover:text-primary hover:bg-white hover:shadow-sm transition-all duration-300"
+                    >
+                        Home
+                    </Link>
+                    <Link
+                        href="/products"
+                        className="px-5 py-2 rounded-full text-sm font-medium text-foreground/80 hover:text-primary hover:bg-white hover:shadow-sm transition-all duration-300"
+                    >
+                        Products
+                    </Link>
+
+                    {/* Resources Dropdown */}
+                    <div className="relative group">
+                        <button className="px-5 py-2 rounded-full text-sm font-medium text-foreground/80 hover:text-primary hover:bg-white hover:shadow-sm transition-all duration-300 flex items-center gap-1">
+                            Resources
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <a
+                                href="/Cattle.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block px-4 py-3 text-sm text-foreground hover:bg-primary/10 hover:text-primary transition-colors first:rounded-t-lg"
+                            >
+                                📄 Livestock Catalog
+                            </a>
+                            <a
+                                href="/Poultry.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block px-4 py-3 text-sm text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
+                            >
+                                📄 Poultry Catalog
+                            </a>
+                            <a
+                                href="/Canine_Literature-PDF.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block px-4 py-3 text-sm text-foreground hover:bg-primary/10 hover:text-primary transition-colors last:rounded-b-lg"
+                            >
+                                📄 Canine Catalog
+                            </a>
+                        </div>
+                    </div>
+
+                    <Link
+                        href="/#contact-us"
+                        className="px-5 py-2 rounded-full text-sm font-medium text-foreground/80 hover:text-primary hover:bg-white hover:shadow-sm transition-all duration-300"
+                    >
+                        About Us
+                    </Link>
                 </nav>
 
                 {/* Right Actions */}
