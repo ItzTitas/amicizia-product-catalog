@@ -1,4 +1,4 @@
-export type Category = "Livestock" | "Poultry" | "Canine" | "Swine" | "Aqua" | "Homeopathy" | "Over the Counter" | "Pet";
+export type Category = "Livestock" | "Poultry" | "Canine" | "Swine" | "Aqua" | "Homeopathy" | "Over the Counter" | "Feline";
 
 export interface SKU {
   id: string;
@@ -24,7 +24,7 @@ export interface Product {
   skus: SKU[];
 }
 
-export const categories: Category[] = ["Livestock", "Poultry", "Canine", "Swine", "Aqua", "Pet", "Homeopathy", "Over the Counter"];
+export const categories: Category[] = ["Livestock", "Poultry", "Canine", "Swine", "Aqua", "Feline", "Homeopathy", "Over the Counter"];
 
 export const products: Product[] = [
   {
@@ -1817,27 +1817,6 @@ export const products: Product[] = [
         "name": "100 ml",
         "code": "PIG-1",
         "unitSize": "100 ml",
-        "packSize": "1 Unit"
-      }
-    ]
-  },
-  {
-    "id": "deltrin-soap",
-    "slug": "deltrin-soap",
-    "name": "Deltrin Soap",
-    "categories": ["Livestock"],
-    "description": "Topical ectoparasiticidal medicated soap.",
-    "composition": "Permethrin – 5% w/w\nCetrimide – 1% w/w\nAloe Vera – 1% w/w",
-    "indications": "Ticks\nFleas\nLice\nMites",
-    "dosage": "",
-    "packaging": "Standard Packaging",
-    "images": [],
-    "skus": [
-      {
-        "id": "deltrin-soap-0",
-        "name": "75 gm",
-        "code": "DEL-S-1",
-        "unitSize": "75 gm",
         "packSize": "1 Unit"
       }
     ]
