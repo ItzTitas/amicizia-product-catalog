@@ -25,7 +25,7 @@ export function ProductSearch() {
             <Input
                 type="search"
                 placeholder="Search products..."
-                className="pl-9 w-full md:w-[300px]"
+                className="pl-9 w-full md:w-[300px] shadow-sm focus-visible:ring-primary transition-all hover:border-primary/50"
                 defaultValue={searchParams.get('search')?.toString()}
                 onChange={(e) => handleSearch(e.target.value)}
             />

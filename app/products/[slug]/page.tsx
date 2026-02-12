@@ -57,13 +57,19 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                 <div className="md:col-span-1 lg:col-span-5">
                     <div className="sticky top-24">
                         <div className="bg-white dark:bg-muted border rounded-xl overflow-hidden aspect-square relative shadow-sm">
-                            <NextImage
-                                src={product.images[0]}
-                                alt={product.name}
-                                fill
-                                className="object-contain p-8"
-                                priority
-                            />
+                            {product.images && product.images.length > 0 && product.images[0] ? (
+                                <NextImage
+                                    src={product.images[0]}
+                                    alt={product.name}
+                                    fill
+                                    className="object-contain p-8"
+                                    priority
+                                />
+                            ) : (
+                                <div className="w-full h-full flex items-center justify-center bg-gray-50 text-muted-foreground">
+                                    <Package className="h-20 w-20 opacity-20" />
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>

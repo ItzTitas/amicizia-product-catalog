@@ -42,90 +42,116 @@ export default async function ProductsPage({
     }
 
     return (
-        <div className="container py-8 md:py-12">
-            <div className="flex flex-col md:flex-row gap-8">
-                {/* Sidebar Filters */}
-                <aside className="w-full md:w-64 space-y-6">
-                    <div>
-                        <h3 className="font-semibold mb-4">Categories</h3>
-                        <div className="flex flex-col space-y-2">
-                            <Link
-                                href="/products"
-                                className={`inline-flex items-center justify-start whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 w-full text-left ${!categoryFilter ? "bg-secondary text-secondary-foreground hover:bg-secondary/80" : "hover:bg-accent hover:text-accent-foreground"}`}
-                            >
-                                All Products
-                            </Link>
-                            {categories.map((cat) => (
+        <div className="min-h-screen bg-gray-50/50">
+            {/* Hero Section */}
+            <div className="bg-primary/5 py-12 mb-8 border-b">
+                <div className="container pl-6 md:pl-12">
+                    <h1 className="text-4xl md:text-5xl font-bold tracking-wide mb-4 bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
+                        {categoryFilter ? `${categoryFilter} Products` : "Our Products"}
+                    </h1>
+                    <p className="text-lg text-muted-foreground max-w-2xl">
+                        Explore our comprehensive range of high-quality pharmaceutical solutions for livestock, poultry, and canine health.
+                    </p>
+                </div>
+            </div>
+
+            <div className="container pb-12">
+                <div className="flex flex-col md:flex-row gap-8">
+                    {/* Sidebar Filters */}
+                    <aside className="w-full md:w-64 space-y-6 md:sticky md:top-24 h-fit">
+                        <div className="bg-background rounded-lg border p-4 shadow-sm">
+                            <h3 className="font-semibold mb-4 flex items-center gap-2">
+                                <span className="h-5 w-1 bg-primary rounded-full"></span>
+                                Categories
+                            </h3>
+                            <div className="flex flex-col space-y-1">
                                 <Link
-                                    key={cat}
-                                    href={`/products?category=${cat}`}
-                                    className={`inline-flex items-center justify-start whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 w-full text-left ${categoryFilter === cat ? "bg-secondary text-secondary-foreground hover:bg-secondary/80" : "hover:bg-accent hover:text-accent-foreground"}`}
+                                    href="/products"
+                                    className={`inline-flex items-center justify-start whitespace-nowrap rounded-md text-sm font-medium transition-all h-10 px-4 py-2 w-full text-left ${!categoryFilter ? "bg-primary text-primary-foreground shadow-md" : "hover:bg-muted hover:translate-x-1"}`}
                                 >
-                                    {cat}
+                                    All Products
+                                </Link>
+                                {categories.map((cat) => (
+                                    <Link
+                                        key={cat}
+                                        href={`/products?category=${cat}`}
+                                        className={`inline-flex items-center justify-start whitespace-nowrap rounded-md text-sm font-medium transition-all h-10 px-4 py-2 w-full text-left ${categoryFilter === cat ? "bg-primary text-primary-foreground shadow-md" : "hover:bg-muted hover:translate-x-1"}`}
+                                    >
+                                        {cat}
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
+                    </aside>
+
+                    {/* Product Grid */}
+                    <div className="flex-1">
+                        <div className="bg-background rounded-lg border p-4 shadow-sm mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sticky top-0 z-10 md:static">
+                            <div>
+                                <p className="text-muted-foreground text-sm">
+                                    Showing <span className="font-bold text-foreground">{filteredProducts.length}</span> results
+                                </p>
+                            </div>
+                            <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto items-center">
+                                <div className="w-full sm:w-auto"><ProductSearch /></div>
+                                <div className="w-full sm:w-auto"><ProductSort /></div>
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 xl:gap-8">
+                            {filteredProducts.map((product) => (
+                                <Link key={product.id} href={`/products/${product.slug}`} className="group h-full block">
+                                    <Card className="flex flex-col h-full overflow-hidden border-transparent hover:border-primary/20 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white">
+                                        <div className="aspect-[4/3] bg-muted relative overflow-hidden">
+                                            {product.images && product.images.length > 0 ? (
+                                                <NextImage
+                                                    src={product.images[0]}
+                                                    alt={product.name}
+                                                    fill
+                                                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                                />
+                                            ) : (
+                                                <div className="w-full h-full flex items-center justify-center bg-gray-50 text-muted-foreground group-hover:bg-gray-100 transition-colors">
+                                                    <Package2 className="h-12 w-12 opacity-10 group-hover:opacity-20 transition-opacity" />
+                                                </div>
+                                            )}
+                                            <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                                <Badge className="bg-white/90 text-primary hover:bg-white shadow-sm backdrop-blur-sm">
+                                                    {product.category}
+                                                </Badge>
+                                            </div>
+                                        </div>
+                                        <CardHeader className="pb-2">
+                                            <div className="flex justify-between items-start">
+                                                <CardTitle className="text-lg font-bold group-hover:text-primary transition-colors line-clamp-1" title={product.name}>
+                                                    {product.name}
+                                                </CardTitle>
+                                            </div>
+                                            <CardDescription className="line-clamp-2 text-xs mt-1 h-10">
+                                                {product.description}
+                                            </CardDescription>
+                                        </CardHeader>
+                                        <CardFooter className="pt-0 mt-auto">
+                                            <div className="w-full inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors h-10 px-4 py-2 bg-slate-900 text-primary-foreground group-hover:bg-primary shadow-none group-hover:shadow-md pointer-events-none">
+                                                View Details
+                                            </div>
+                                        </CardFooter>
+                                    </Card>
                                 </Link>
                             ))}
                         </div>
-                    </div>
-                </aside>
 
-                {/* Product Grid */}
-                <div className="flex-1">
-                    <div className="mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                        <div>
-                            <h1 className="text-3xl font-bold tracking-tight">{categoryFilter || "All Products"}</h1>
-                            <p className="text-muted-foreground mt-2">
-                                Showing {filteredProducts.length} results
-                            </p>
-                        </div>
-                        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto items-center">
-                            <ProductSearch />
-                            <ProductSort />
-                        </div>
+                        {filteredProducts.length === 0 && (
+                            <div className="text-center py-16 border-2 border-dashed rounded-xl bg-gray-50/50">
+                                <Package2 className="h-12 w-12 mx-auto text-muted-foreground/30 mb-4" />
+                                <h3 className="text-lg font-semibold mb-2">No products found</h3>
+                                <p className="text-muted-foreground mb-6">Try adjusting your filters or search terms.</p>
+                                <Button variant="outline" asChild>
+                                    <Link href="/products">Clear Filters</Link>
+                                </Button>
+                            </div>
+                        )}
                     </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {filteredProducts.map((product) => (
-                            <Card key={product.id} className="flex flex-col overflow-hidden hover:shadow-md transition-shadow">
-                                <div className="aspect-[4/3] bg-muted relative">
-                                    {product.images && product.images.length > 0 ? (
-                                        <NextImage
-                                            src={product.images[0]}
-                                            alt={product.name}
-                                            fill
-                                            className="object-cover"
-                                        />
-                                    ) : (
-                                        <div className="w-full h-full flex items-center justify-center bg-gray-100 text-muted-foreground">
-                                            <Package2 className="h-10 w-10 opacity-20" />
-                                        </div>
-                                    )}
-                                </div>
-                                <CardHeader>
-                                    <div className="text-sm font-medium text-primary mb-1">{product.category}</div>
-                                    <CardTitle className="text-lg">{product.name}</CardTitle>
-                                </CardHeader>
-                                <CardContent className="flex-1">
-                                    <p className="text-sm text-muted-foreground line-clamp-3">
-                                        {product.description}
-                                    </p>
-                                </CardContent>
-                                <CardFooter>
-                                    <Button asChild className="w-full">
-                                        <Link href={`/products/${product.slug}`}>View Details</Link>
-                                    </Button>
-                                </CardFooter>
-                            </Card>
-                        ))}
-                    </div>
-
-                    {filteredProducts.length === 0 && (
-                        <div className="text-center py-12 border rounded-lg bg-muted/10">
-                            <p className="text-muted-foreground">No products found in this category.</p>
-                            <Button variant="link" asChild className="mt-2">
-                                <Link href="/products">View All Products</Link>
-                            </Button>
-                        </div>
-                    )}
                 </div>
             </div>
         </div>
