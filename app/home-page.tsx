@@ -7,8 +7,9 @@ import { ChevronRight, Sparkles, TrendingUp, Users, Award, Target, CheckCircle, 
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [scrollY, setScrollY] = useState(0);
+  const [mounted, setMounted] = useState(false);
 
-  const slides = [
+  const defaultSlides = [
     '/images/slide1.jpg',
     '/images/slide2.jpg',
     '/images/slide3.jpg',
@@ -18,13 +19,27 @@ export default function HomePage() {
     '/images/slide7.jpg'
   ];
 
+  const [slides, setSlides] = useState(defaultSlides);
+
+  // Shuffle and mount on client
+  useEffect(() => {
+    const shuffled = [...defaultSlides];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    setSlides(shuffled);
+    setMounted(true);
+  }, []);
+
   // Slideshow rotation
   useEffect(() => {
+    if (!mounted) return;
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, [slides.length]);
+  }, [slides.length, mounted]);
 
   // Parallax scrolling
   useEffect(() => {
@@ -56,13 +71,18 @@ export default function HomePage() {
       <section className="relative h-screen flex items-center justify-center text-center text-white overflow-hidden -mt-24 pt-24">
         {/* Slideshow with Parallax */}
         <div className="hero-slideshow" style={{ transform: `translateY(${scrollY * 0.5}px)` }}>
-          {slides.map((slide, index) => (
+          {mounted ? slides.map((slide, index) => (
             <div
               key={index}
               className={`slide ${index === currentSlide ? 'active' : ''}`}
               style={{ backgroundImage: `url('${slide}')` }}
             />
-          ))}
+          )) : (
+            <div
+              className="slide active"
+              style={{ backgroundImage: `url('${slides[0]}')` }}
+            />
+          )}
         </div>
 
         {/* Floating Particles - Predefined positions to avoid hydration errors */}
