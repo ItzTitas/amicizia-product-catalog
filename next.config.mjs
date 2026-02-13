@@ -44,6 +44,23 @@ const nextConfig = {
             },
         ];
     },
+
+    // Redirects to enforce www
+    async redirects() {
+        return [
+            {
+                source: '/:path*',
+                has: [
+                    {
+                        type: 'host',
+                        value: 'amicizialifescience.com',
+                    },
+                ],
+                destination: 'https://www.amicizialifescience.com/:path*',
+                permanent: true,
+            },
+        ];
+    },
 };
 
 export default nextConfig;
