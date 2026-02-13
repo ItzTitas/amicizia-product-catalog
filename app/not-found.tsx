@@ -11,6 +11,7 @@ export default function NotFound() {
                     src="/error.jpg"
                     alt="Page Not Found"
                     fill
+                    unoptimized
                     className="object-contain rounded-lg shadow-lg"
                 />
             </div>
