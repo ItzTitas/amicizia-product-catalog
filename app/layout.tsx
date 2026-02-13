@@ -11,6 +11,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Amicizia Life Science | Home",
   description: "A noble cause to serve the livestock with scientific, technical and clinical solutions.",
+  verification: {
+    google: "vp4zmRBhQJOkuSWz_vvcvbdLcQuCRLg6dzVQJPUVrEI",
+  },
   icons: {
     icon: "/logo.png",
     shortcut: "/logo.png",
