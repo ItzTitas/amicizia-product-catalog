@@ -9,7 +9,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge, Package2, Sparkles, ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Amicizia Life Science | Products",
+    title: "Amicizia Life Science | Veterinary & Poultry Products in Kolkata",
 };
 
 export const dynamic = 'force-dynamic';

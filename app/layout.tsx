@@ -10,7 +10,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Amicizia Life Science | Home",
+  title: "Amicizia Life Science | Veterinary & Poultry Healthcare Products in India",
   description: "Amicizia Life Science: Providing scientific, technical, and clinical solutions for livestock, poultry, and companion animal health.",
   verification: {
     google: "vp4zmRBhQJOkuSWz_vvcvbdLcQuCRLg6dzVQJPUVrEI",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     apple: "/logo.png",
   },
   openGraph: {
-    title: "Amicizia Life Science | Home",
+    title: "Amicizia Life Science | Veterinary & Poultry Healthcare Products in India",
     description: "Amicizia Life Science: Providing scientific, technical, and clinical solutions for livestock, poultry, and companion animal health.",
     url: "https://www.amicizialifescience.com",
     siteName: "Amicizia Life Science",
