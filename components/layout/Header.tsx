@@ -1,13 +1,15 @@
 'use client';
 
-import Link from "next/link";
+import { Link, usePathname } from "@/navigation";
 import { Button } from "@/components/ui/button";
 import { CartSheet } from "@/components/cart/CartSheet";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Package2 } from "lucide-react";
-import { usePathname } from "next/navigation";
+
+import { useTranslations } from "next-intl";
 
 export function Header() {
+    const t = useTranslations('Navigation');
     const pathname = usePathname();
     return (
         <header className="sticky top-0 z-50 w-full transition-all duration-300">
@@ -31,8 +33,8 @@ export function Header() {
                                     </span>
                                 </Link>
                                 <div className="flex flex-col gap-4 text-lg">
-                                    <a href="/" className={`hover:text-primary transition-colors font-medium px-3 py-2 rounded-lg ${pathname === '/' ? 'bg-slate-900 text-white' : ''}`}>Home</a>
-                                    <Link href="/products" className={`hover:text-primary transition-colors font-medium px-3 py-2 rounded-lg ${pathname.startsWith('/products') ? 'bg-slate-900 text-white' : ''}`}>Products</Link>
+                                    <Link href="/" className={`hover:text-primary transition-colors font-medium px-3 py-2 rounded-lg ${pathname === '/' ? 'bg-slate-900 text-white' : ''}`}>{t('home')}</Link>
+                                    <Link href="/products" className={`hover:text-primary transition-colors font-medium px-3 py-2 rounded-lg ${pathname.startsWith('/products') ? 'bg-slate-900 text-white' : ''}`}>{t('products')}</Link>
 
                                     {/* Resources Section */}
                                     <div className="border-t pt-4">
@@ -50,8 +52,8 @@ export function Header() {
                                         </div>
                                     </div>
 
-                                    <a href="/#contact-us" className="hover:text-primary transition-colors font-medium px-3 py-2 rounded-lg">About Us</a>
-                                    <Link href="/contact" className={`hover:text-primary transition-colors font-medium px-3 py-2 rounded-lg ${pathname === '/contact' ? 'bg-slate-900 text-white' : ''}`}>Contact</Link>
+                                    <a href="/#contact-us" className="hover:text-primary transition-colors font-medium px-3 py-2 rounded-lg">{t('about')}</a>
+                                    <Link href="/contact" className={`hover:text-primary transition-colors font-medium px-3 py-2 rounded-lg ${pathname === '/contact' ? 'bg-slate-900 text-white' : ''}`}>{t('contact')}</Link>
                                 </div>
                             </nav>
                         </SheetContent>
@@ -80,7 +82,7 @@ export function Header() {
                             : 'text-foreground/80 hover:text-primary hover:bg-white hover:shadow-sm'
                             }`}
                     >
-                        Home
+                        {t('home')}
                     </Link>
                     <Link
                         href="/products"
@@ -89,7 +91,7 @@ export function Header() {
                             : 'text-foreground/80 hover:text-primary hover:bg-white hover:shadow-sm'
                             }`}
                     >
-                        Products
+                        {t('products')}
                     </Link>
 
                     {/* Resources Dropdown */}
@@ -132,16 +134,17 @@ export function Header() {
                         href="/#contact-us"
                         className="px-5 py-2 rounded-full text-sm font-medium text-foreground/80 hover:text-primary hover:bg-white hover:shadow-sm transition-all duration-300"
                     >
-                        About Us
+                        {t('about')}
                     </Link>
                 </nav>
 
                 {/* Right Actions */}
                 <div className="flex items-center gap-3">
+                    {/* <LanguageSwitcher /> Removed as per user request */}
                     <CartSheet />
                     <Link href="/contact" className="hidden md:block">
                         <Button className="rounded-full px-6 shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all hover:-translate-y-0.5 bg-gradient-to-r from-primary to-teal-600 border-none">
-                            Contact Us
+                            {t('contact')}
                         </Button>
                     </Link>
                 </div>

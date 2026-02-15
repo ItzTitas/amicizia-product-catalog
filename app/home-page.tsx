@@ -3,8 +3,11 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ChevronRight, Sparkles, TrendingUp, Users, Award, Target, CheckCircle, ShoppingBag } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function HomePage() {
+  const t = useTranslations('HomePage');
+  const navT = useTranslations('Navigation');
   const [currentSlide, setCurrentSlide] = useState(0);
   const [scrollY, setScrollY] = useState(0);
   const [mounted, setMounted] = useState(false);
@@ -70,7 +73,7 @@ export default function HomePage() {
       {/* Hero Section - Full Bleed Behind Header */}
       <section className="relative h-screen flex items-center justify-center text-center text-white overflow-hidden -mt-24 pt-24">
         {/* Slideshow with Parallax */}
-        <div className="hero-slideshow" style={{ transform: `translateY(${scrollY * 0.5}px)` }}>
+        <div className="hero-slideshow" key="hero-slideshow-v1" style={{ transform: `translateY(${scrollY * 0.5}px)` }}>
           {mounted ? slides.map((slide, index) => (
             <div
               key={index}
@@ -130,14 +133,14 @@ export default function HomePage() {
           {/* Premium Badge */}
           <div className="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-500 rounded-full shadow-lg mb-6 mx-auto w-fit animate-on-scroll hover:scale-105 transition-transform">
             <Sparkles className="h-5 w-5 text-white animate-pulse" />
-            <span className="text-sm font-bold text-white">Premium Veterinary Solutions</span>
+            <span className="text-sm font-bold text-white">{t('Hero.badge')}</span>
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-on-scroll">
-            Welcome to Amicizia Life Science
+            {t('Hero.title')}
           </h1>
           <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto animate-on-scroll" style={{ transitionDelay: '0.2s' }}>
-            A noble cause to serve the livestock with scientific, technical and clinical solutions.
+            {t('Hero.subtitle')}
           </p>
 
           {/* Dual CTA Buttons */}
@@ -147,14 +150,14 @@ export default function HomePage() {
               className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-teal-600 hover:from-primary/90 hover:to-teal-700 text-white rounded-full font-semibold transition-all shadow-lg hover:shadow-xl hover:scale-105 hover:-translate-y-1"
             >
               <ShoppingBag className="h-5 w-5 group-hover:rotate-12 transition-transform" />
-              Shop Our Products
+              {t('Hero.cta_products')}
               <ChevronRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <a
               href="#contact-us"
               className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white rounded-full font-semibold transition-all border border-white/20 hover:border-white/40 hover:scale-105"
             >
-              Learn More
+              {t('Hero.cta_learn')}
               <ChevronRight className="h-5 w-5" />
             </a>
           </div>
@@ -180,17 +183,17 @@ export default function HomePage() {
 
         <div className="container relative z-10">
           <h2 className="text-center text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
-            Why AMICIZIA
+            {t('WhyUs.title')}
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto text-lg">
-            Committed to excellence in veterinary pharmaceutical solutions
+            {t('WhyUs.subtitle')}
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: CheckCircle, title: 'EXTREME FOCUS ON QUALITY', gradient: 'from-primary to-teal-600', delay: '0s' },
-              { icon: Users, title: 'ULTIMATE CLIENT SATISFACTION', gradient: 'from-blue-500 to-blue-700', delay: '0.2s' },
-              { icon: Award, title: 'HIGHLY DEDICATED TEAM', gradient: 'from-emerald-500 to-emerald-700', delay: '0.4s' }
+              { icon: CheckCircle, key: 'quality_title', gradient: 'from-primary to-teal-600', delay: '0s' },
+              { icon: Users, key: 'client_title', gradient: 'from-blue-500 to-blue-700', delay: '0.2s' },
+              { icon: Award, key: 'team_title', gradient: 'from-emerald-500 to-emerald-700', delay: '0.4s' }
             ].map((item, i) => (
               <div
                 key={i}
@@ -203,7 +206,7 @@ export default function HomePage() {
                 <div className={`h-16 w-16 mx-auto mb-4 bg-gradient-to-br ${item.gradient} rounded-full flex items-center justify-center group-hover:rotate-6 transition-transform duration-300`}>
                   <item.icon className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-primary text-center">{item.title}</h3>
+                <h3 className="text-xl font-bold text-primary text-center">{t(`WhyUs.${item.key}`)}</h3>
               </div>
             ))}
           </div>
@@ -213,18 +216,18 @@ export default function HomePage() {
       {/* About Us - Enhanced Checklist */}
       <section id="about-us" className="animate-on-scroll bg-white">
         <div className="container">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">ABOUT US</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">{t('About.title')}</h2>
           <p className="mb-8 leading-relaxed text-lg">
-            Amicizia Life Science is committed to become a trusted & admired player in Poultry, Livestock & Aqua culture sector by offering unique & quality products to customers. We are dedicated to bring new solutions and offer unique products manufactured at GMP & ISO accredited sterile manufacturing facility for Veterinary use.
+            {t('About.description')}
           </p>
 
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
             {[
-              'Customer Satisfaction',
-              'Innovative & cost effective Products',
-              'CGMP in Manufacturing of Products',
-              'Employee Involvement & Improvement',
-              'Compliance to Legal, Statutory & Regulatory requirement'
+              'satisfaction',
+              'innovative',
+              'cgmp',
+              'employee',
+              'compliance'
             ].map((item, i) => (
               <li
                 key={i}
@@ -232,7 +235,7 @@ export default function HomePage() {
                 style={{ transitionDelay: `${i * 0.1}s` }}
               >
                 <span className="text-primary text-2xl font-bold">✓</span>
-                <span className="text-foreground">{item}</span>
+                <span className="text-foreground">{t(`About.checklist.${item}`)}</span>
               </li>
             ))}
           </ul>
@@ -241,7 +244,7 @@ export default function HomePage() {
             onClick={() => document.getElementById('contact-us')?.scrollIntoView({ behavior: 'smooth' })}
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-full font-semibold transition-all shadow-lg hover:shadow-xl hover:scale-105 hover:-translate-y-1"
           >
-            Contact Us
+            {t('About.cta_contact')}
             <ChevronRight className="h-5 w-5" />
           </button>
         </div>
@@ -255,10 +258,10 @@ export default function HomePage() {
             <div className="p-8 bg-gradient-to-br from-primary/5 to-teal-50 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
               <h2 className="flex items-center gap-3 text-3xl font-bold mb-6 text-primary">
                 <TrendingUp className="h-8 w-8" />
-                OUR MISSION
+                {t('MissionVision.mission_title')}
               </h2>
               <p className="leading-relaxed text-lg">
-                To offer unique veterinary pharmaceuticals & nutritional products developed in a creative & innovative way, under high quality standards that allows us to provide the best solution to offer our end customers.
+                {t('MissionVision.mission_desc')}
               </p>
             </div>
 
@@ -266,10 +269,10 @@ export default function HomePage() {
             <div className="p-8 bg-gradient-to-br from-teal-50 to-blue-50 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
               <h2 className="flex items-center gap-3 text-3xl font-bold mb-6 text-primary">
                 <Sparkles className="h-8 w-8" />
-                OUR VISION
+                {t('MissionVision.vision_title')}
               </h2>
               <p className="leading-relaxed text-lg">
-                To be one of the leading Animal Health Pharmaceutical Companies, not only in sales but also in innovation, value creation and process excellence with high sense of social responsibility.
+                {t('MissionVision.vision_desc')}
               </p>
             </div>
           </div>
@@ -279,14 +282,14 @@ export default function HomePage() {
       {/* Values Grid - 4 Columns */}
       <section className="animate-on-scroll bg-white">
         <div className="container">
-          <h2 className="text-center text-3xl md:text-4xl font-bold mb-12 text-primary">OUR VALUES</h2>
+          <h2 className="text-center text-3xl md:text-4xl font-bold mb-12 text-primary">{t('Values.title')}</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: Users, title: 'TEAM', desc: 'A group of likeminded people demonstrating unique talents while striving for success.' },
-              { icon: Award, title: 'PROFESSIONALISM', desc: 'Embodied by Integrity, Honesty & Respect in all our business dealings.' },
-              { icon: Target, title: 'EXCELLENCE', desc: 'Commitment to reach above and beyond to deliver unsurpassed achievements.' },
-              { icon: CheckCircle, title: 'QUALITY', desc: 'Superior quality products with stringent checks at every manufacturing stage.' }
+              { icon: Users, key: 'team' },
+              { icon: Award, key: 'professionalism' },
+              { icon: Target, key: 'excellence' },
+              { icon: CheckCircle, key: 'quality' }
             ].map((value, i) => (
               <div
                 key={i}
@@ -296,8 +299,8 @@ export default function HomePage() {
                 <div className="h-12 w-12 mb-4 bg-gradient-to-br from-primary to-teal-600 rounded-full flex items-center justify-center">
                   <value.icon className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-lg font-bold mb-2 text-primary">{value.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{value.desc}</p>
+                <h3 className="text-lg font-bold mb-2 text-primary">{t(`Values.items.${value.key}.title`)}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{t(`Values.items.${value.key}.desc`)}</p>
               </div>
             ))}
           </div>
@@ -307,7 +310,7 @@ export default function HomePage() {
       {/* Contact Us - Enhanced with Google Maps */}
       <section id="contact-us" className="animate-on-scroll bg-slate-900 text-white">
         <div className="container">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">CONTACT US</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">{t('Contact.title')}</h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Contact Information */}
@@ -315,8 +318,8 @@ export default function HomePage() {
               <div>
                 <h3 className="text-2xl font-bold mb-4 text-teal-400">Amicizia Life Science Pvt. LTD.</h3>
                 <address className="not-italic leading-relaxed text-lg space-y-2">
-                  <p>601, Manas Anand Apartment,</p>
-                  <p>G.B.Road, Dongripada, Thane (Maharashtra)</p>
+                  <p>{t('Contact.addressFirstLine')}</p>
+                  <p>{t('Contact.addressSecondLine')}</p>
                 </address>
               </div>
 
@@ -346,23 +349,23 @@ export default function HomePage() {
                 <p className="flex items-center gap-3 text-lg">
                   <span className="text-2xl">👥</span>
                   <a href="https://www.facebook.com/p/Amicizia-Life-Science-Pvt-Ltd-61573153274680/" target="_blank" rel="noopener noreferrer" className="text-teal-400 hover:underline">
-                    Follow us on Facebook
+                    {t('Contact.followFacebook')}
                   </a>
                 </p>
               </div>
 
               {/* Quick Links */}
               <div className="pt-6 border-t border-white/20">
-                <h4 className="font-semibold mb-3">Quick Links</h4>
+                <h4 className="font-semibold mb-3">{t('Contact.quickLinksTitle')}</h4>
                 <div className="flex flex-wrap gap-3">
                   <Link href="/products" className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-full text-sm transition-colors">
-                    Products
+                    {navT('products')}
                   </Link>
                   <a href="/Cattle.pdf" target="_blank" className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-full text-sm transition-colors">
-                    Livestock Catalog
+                    {t('Contact.livestockCatalog')}
                   </a>
                   <a href="/Poultry.pdf" target="_blank" className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-full text-sm transition-colors">
-                    Poultry Catalog
+                    {t('Contact.poultryCatalog')}
                   </a>
                 </div>
               </div>

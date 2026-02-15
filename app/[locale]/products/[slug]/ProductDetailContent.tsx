@@ -9,11 +9,10 @@ import NextImage from "next/image";
 import { notFound } from "next/navigation";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
-import { use } from "react";
-
-export default function ProductDetailPage({ params }: { params: Promise<{ slug: string }> }) {
-    const { slug } = use(params);
+export default function ProductDetailContent({ slug }: { slug: string }) {
+    const t = useTranslations('ProductDetails');
     const product = products.find((p) => p.slug === slug);
     const addItem = useCartStore((state) => state.addItem);
     const [selectedSkuId, setSelectedSkuId] = useState<string | null>(null);
@@ -73,7 +72,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                 {/* Modern Breadcrumb */}
                 <div className="mb-8">
                     <Link href="/products" className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-teal-600 bg-white/80 backdrop-blur-sm border border-teal-100 hover:border-teal-300 hover:shadow-md transition-all">
-                        <ArrowLeft className="h-4 w-4" /> Back to Products
+                        <ArrowLeft className="h-4 w-4" /> {t('back_to_products')}
                     </Link>
                 </div>
 
@@ -136,7 +135,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                             <div className="space-y-4 bg-white/80 backdrop-blur-xl p-6 rounded-2xl border border-teal-100 shadow-lg">
                                 <label className="text-base font-bold text-slate-800 flex items-center gap-2">
                                     <span className="h-6 w-1.5 bg-gradient-to-b from-teal-400 to-cyan-500 rounded-full"></span>
-                                    Available Sizes / Variants:
+                                    {t('available_variants')}
                                 </label>
                                 <div className="flex flex-wrap gap-3">
                                     {product.skus.map((sku) => {
@@ -164,7 +163,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                 </div>
                                 {selectedSku && (
                                     <p className="text-sm text-slate-600 mt-2 bg-teal-50 px-4 py-2 rounded-lg border border-teal-100">
-                                        Selected: <span className="font-bold text-teal-700">{selectedSku.name}</span>
+                                        {t('selected')} <span className="font-bold text-teal-700">{selectedSku.name}</span>
                                     </p>
                                 )}
                             </div>
@@ -178,7 +177,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                     className="flex-1 text-base h-14 font-bold bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 shadow-xl shadow-teal-500/50 hover:shadow-2xl hover:shadow-teal-500/60 transition-all rounded-xl"
                                     onClick={handleAddToOrder}
                                 >
-                                    <Plus className="mr-2 h-5 w-5" /> Add to Inquiry
+                                    <Plus className="mr-2 h-5 w-5" /> {t('add_to_inquiry')}
                                 </Button>
                                 {product.brochureUrl && (
                                     <Button
@@ -188,7 +187,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                         asChild
                                     >
                                         <a href={product.brochureUrl} target="_blank" rel="noopener noreferrer">
-                                            <FileText className="mr-2 h-5 w-5" /> Download Brochure
+                                            <FileText className="mr-2 h-5 w-5" /> {t('download_brochure')}
                                         </a>
                                     </Button>
                                 )}
@@ -198,16 +197,16 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                             <div className="grid grid-cols-2 gap-4 text-sm pt-4 border-t border-teal-200">
                                 <div className="flex items-center gap-3 bg-green-50 px-4 py-3 rounded-xl border border-green-200">
                                     <ShieldCheck className="h-5 w-5 text-green-600" />
-                                    <span className="font-semibold text-green-700">Quality Guaranteed</span>
+                                    <span className="font-semibold text-green-700">{t('quality_guaranteed')}</span>
                                 </div>
                                 <div className="flex items-center gap-3 bg-blue-50 px-4 py-3 rounded-xl border border-blue-200">
                                     <Truck className="h-5 w-5 text-blue-600" />
-                                    <span className="font-semibold text-blue-700">Bulk Delivery</span>
+                                    <span className="font-semibold text-blue-700">{t('bulk_delivery')}</span>
                                 </div>
                             </div>
 
                             <p className="text-xs text-slate-600 border-t border-teal-200 pt-4 bg-teal-50/50 px-4 py-3 rounded-lg">
-                                💡 This adds the item to your inquiry list. Our sales team will contact you with pricing and availability.
+                                💡 {t('inquiry_note')}
                             </p>
                         </div>
 
@@ -219,7 +218,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                         <span className="p-2 bg-gradient-to-br from-teal-400 to-cyan-500 rounded-xl">
                                             <Package className="h-5 w-5 text-white" />
                                         </span>
-                                        Composition
+                                        {t('composition')}
                                     </h3>
                                     <div className="bg-gradient-to-br from-slate-50 to-teal-50 p-5 rounded-xl text-sm leading-relaxed border border-teal-100 text-slate-700">
                                         {product.composition}
@@ -229,7 +228,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
 
                             {product.indications && (
                                 <div className="bg-white/80 backdrop-blur-xl p-6 rounded-2xl border border-teal-100 shadow-lg space-y-3">
-                                    <h3 className="text-xl font-bold text-slate-800">Indications</h3>
+                                    <h3 className="text-xl font-bold text-slate-800">{t('indications')}</h3>
                                     <ul className="list-disc list-outside ml-6 text-slate-600 space-y-2">
                                         {product.indications.split(/[\n\r]+|\. /).map((item, i) => (
                                             item.trim() && <li key={i} className="leading-relaxed">{item.trim().replace(/\.$/, '')}</li>
@@ -240,7 +239,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
 
                             {product.dosage && (
                                 <div className="bg-white/80 backdrop-blur-xl p-6 rounded-2xl border border-teal-100 shadow-lg space-y-3">
-                                    <h3 className="text-xl font-bold text-slate-800">Dosage & Administration</h3>
+                                    <h3 className="text-xl font-bold text-slate-800">{t('dosage')}</h3>
                                     <div className="text-sm text-slate-600 leading-relaxed bg-gradient-to-br from-slate-50 to-teal-50 p-5 rounded-xl border border-teal-100">
                                         {product.dosage}
                                     </div>

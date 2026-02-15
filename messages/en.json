@@ -1,0 +1,142 @@
+{
+    "HomePage": {
+        "Hero": {
+            "badge": "Premium Veterinary Solutions",
+            "title": "Welcome to Amicizia Life Science",
+            "subtitle": "A noble cause to serve the livestock with scientific, technical and clinical solutions.",
+            "cta_products": "Shop Our Products",
+            "cta_learn": "Learn More"
+        },
+        "WhyUs": {
+            "title": "Why AMICIZIA",
+            "subtitle": "Committed to excellence in veterinary pharmaceutical solutions",
+            "quality_title": "EXTREME FOCUS ON QUALITY",
+            "client_title": "ULTIMATE CLIENT SATISFACTION",
+            "team_title": "HIGHLY DEDICATED TEAM"
+        },
+        "About": {
+            "title": "ABOUT US",
+            "description": "Amicizia Life Science is committed to become a trusted & admired player in Poultry, Livestock & Aqua culture sector by offering unique & quality products to customers. We are dedicated to bring new solutions and offer unique products manufactured at GMP & ISO accredited sterile manufacturing facility for Veterinary use.",
+            "checklist": {
+                "satisfaction": "Customer Satisfaction",
+                "innovative": "Innovative & cost effective Products",
+                "cgmp": "CGMP in Manufacturing of Products",
+                "employee": "Employee Involvement & Improvement",
+                "compliance": "Compliance to Legal, Statutory & Regulatory requirement"
+            },
+            "cta_contact": "Contact Us"
+        },
+        "MissionVision": {
+            "mission_title": "OUR MISSION",
+            "mission_desc": "To offer unique veterinary pharmaceuticals & nutritional products developed in a creative & innovative way, under high quality standards that allows us to provide the best solution to offer our end customers.",
+            "vision_title": "OUR VISION",
+            "vision_desc": "To be one of the leading Animal Health Pharmaceutical Companies, not only in sales but also in innovation, value creation and process excellence with high sense of social responsibility."
+        },
+        "Values": {
+            "title": "OUR VALUES",
+            "items": {
+                "team": {
+                    "title": "TEAM",
+                    "desc": "A group of likeminded people demonstrating unique talents while striving for success."
+                },
+                "professionalism": {
+                    "title": "PROFESSIONALISM",
+                    "desc": "Embodied by Integrity, Honesty & Respect in all our business dealings."
+                },
+                "excellence": {
+                    "title": "EXCELLENCE",
+                    "desc": "Commitment to reach above and beyond to deliver unsurpassed achievements."
+                },
+                "quality": {
+                    "title": "QUALITY",
+                    "desc": "Superior quality products with stringent checks at every manufacturing stage."
+                }
+            }
+        },
+        "Contact": {
+            "title": "CONTACT US",
+            "addressFirstLine": "601, Manas Anand Apartment,",
+            "addressSecondLine": "G.B.Road, Dongripada, Thane (Maharashtra)",
+            "followFacebook": "Follow us on Facebook",
+            "quickLinksTitle": "Quick Links",
+            "livestockCatalog": "Livestock Catalog",
+            "poultryCatalog": "Poultry Catalog"
+        }
+    },
+    "Navigation": {
+        "home": "Home",
+        "products": "Products",
+        "about": "About Us",
+        "contact": "Contact Us"
+    },
+    "Products": {
+        "title_default": "Pharmaceutical Excellence",
+        "title_solutions": "Solutions",
+        "description": "Discover our scientifically formulated range of veterinary products designed for superior livestock, poultry, and companion animal health.",
+        "badge_default": "Premium Catalog",
+        "categories_title": "Categories",
+        "all_products": "All Products",
+        "showing_results": "Showing results",
+        "view_details": "View Details",
+        "empty_title": "No products found",
+        "empty_desc": "Try adjusting your filters or search terms.",
+        "clear_filters": "Clear Filters"
+    },
+    "Categories": {
+        "Livestock": "Livestock",
+        "Poultry": "Poultry",
+        "Canine": "Canine",
+        "Swine": "Swine",
+        "Aqua": "Aqua",
+        "Homeopathy": "Homeopathy",
+        "Over the Counter": "Over the Counter",
+        "Feline": "Feline"
+    },
+    "ProductDetails": {
+        "back_to_products": "Back to Products",
+        "available_variants": "Available Sizes / Variants:",
+        "selected": "Selected:",
+        "add_to_inquiry": "Add to Inquiry",
+        "download_brochure": "Download Brochure",
+        "quality_guaranteed": "Quality Guaranteed",
+        "bulk_delivery": "Bulk Delivery",
+        "inquiry_note": "This adds the item to your inquiry list. Our sales team will contact you with pricing and availability.",
+        "composition": "Composition",
+        "indications": "Indications",
+        "dosage": "Dosage & Administration"
+    },
+    "ContactPage": {
+        "badge": "Get In Touch",
+        "title": "Contact Us",
+        "subtitle": "Get in touch with our team for inquiries about our products and services.",
+        "info_title": "Contact Information",
+        "info_desc": "Reach out to us directly through any of these channels.",
+        "office_label": "Registered Office",
+        "email_label": "Email",
+        "phone_label": "Phone",
+        "hours_title": "Business Hours",
+        "days": {
+            "mon_fri": "Monday - Friday",
+            "sat": "Saturday",
+            "sun": "Sunday",
+            "closed": "Closed"
+        },
+        "form_title": "Send us a Message",
+        "form_desc": "Fill out the form below to start a WhatsApp chat with our team.",
+        "form_labels": {
+            "first_name": "First name",
+            "last_name": "Last name",
+            "email": "Email",
+            "phone": "Phone",
+            "message": "Message"
+        },
+        "placeholders": {
+            "first_name": "John",
+            "last_name": "Doe",
+            "email": "john@example.com",
+            "phone": "+91 98765 43210",
+            "message": "How can we help you?"
+        },
+        "submit_button": "Chat on WhatsApp"
+    }
+}

@@ -1,0 +1,213 @@
+{
+    "HomePage": {
+        "Hero": {
+            "badge": "Premium Veterinary Solutions te pawh a awm bawk",
+            "title": "Amicizia Life Science ah hian kan lo lawm a che",
+            "subtitle": "Science, technical leh clinical solution hmanga ran vulh rawngbawlna tur thil ropui tak.",
+            "cta_products": "Kan Products te hi Shop rawh",
+            "cta_learn": "Hriat belh zel rawh"
+        },
+        "WhyUs": {
+            "title": "Engvangin nge THIANNA",
+            "subtitle": "Veterinary pharmaceutical solutions lama thiamna sang tak nei tura inpe",
+            "quality_title": "QUALITY AH EXTREME FOCUS A NI",
+            "client_title": "CLIENT THIL TIH DAN TAK TAK TAK TAK",
+            "team_title": "TEAM THIL THLENG THIN THIN"
+        },
+        "About": {
+            "title": "KAN CHANCHIN",
+            "description": "Amicizia Life Science hian Poultry, Livestock & Aqua culture sector-a player rintlak & ngaihsan tak nih tumin a inpeih a, customer te hnena thil danglam bik & quality tha tak tak a pe chhuak a ni. Solution thar rawn keng turin kan inpe a, Veterinary hman atan GMP & ISO accredited sterile manufacturing facility-a siam thil danglam tak tak kan pe bawk.",
+            "checklist": {
+                "satisfaction": "Customer te lungawina tur",
+                "innovative": "Thil thar & man tlawm zawk Products",
+                "cgmp": "CGMP hian thil siamchhuahna kawngah a thawk a ni",
+                "employee": "Hnathawktute Inrawlhna & Hmasawnna",
+                "compliance": "Legal, Statutory & Regulatory-a thil tulte zawm tur a ni"
+            },
+            "cta_contact": "Min rawn biak theih reng e"
+        },
+        "MissionVision": {
+            "mission_title": "KAN THIL THLENG THIN",
+            "mission_desc": "Veterinary pharmaceuticals & nutritional products danglam tak tak, creative & innovative taka siam chhuah, quality standard sang tak hnuaia kan end customer te hnena kan pek theihna tur solution tha ber pek theihna tur pe turin.",
+            "vision_title": "KAN THIL THLENG THIN",
+            "vision_desc": "Animal Health Pharmaceutical Company hmahruaitu zinga mi nih tur, sales lamah chauh ni lovin thil thar siamna, value creation leh process excellence lamah pawh social responsibility hriatna sang tak nei turin."
+        },
+        "Values": {
+            "title": "KAN VALUES TE",
+            "items": {
+                "team": {
+                    "title": "PAWL",
+                    "desc": "Hlawhtlinna an beih ruala talent danglam tak tak lantir thin ngaihdan inang mi pawl."
+                },
+                "professionalism": {
+                    "title": "PROFESSIONALISM THIL THAWN THIN",
+                    "desc": "Kan sumdawnna zawng zawngah Integrity, Honesty & Respect hmanga kan inthuam."
+                },
+                "excellence": {
+                    "title": "THIL THLENG THIN",
+                    "desc": "Hlawhtlinna tluk loh thlen theihna tura chunglam leh a chunglam thleng tura inpekna."
+                },
+                "quality": {
+                    "title": "NIHPHUNG",
+                    "desc": "Thil siamna stage tinah check khauh tak neia quality tha zawk product."
+                }
+            }
+        },
+        "Contact": {
+            "title": "KAN INBIAK ANG",
+            "addressFirstLine": "601, Manas Anand Apartment-ah a awm a, a hmunah hian mi 100 chuang an awm.",
+            "addressSecondLine": "G.B.Kawngpui, Dongripada, Thane (Maharashtra)-ah a awm a.",
+            "followFacebook": "Facebook ah min lo follow ve dawn nia",
+            "quickLinksTitle": "Quick Links te pawh a awm",
+            "livestockCatalog": "Ran vulh Catalog",
+            "poultryCatalog": "Vawk chi hrang hrang Catalog"
+        }
+    },
+    "Navigation": {
+        "home": "In",
+        "products": "Thil siam chhuah te",
+        "about": "Kan chanchin",
+        "contact": "Min rawn biak theih reng e"
+    },
+    "ContactPage": {
+        "Hero": {
+            "badge": "Get In Touch rawh",
+            "title": "Min rawn biak theih reng e",
+            "subtitle": "Kan thil siam leh service chungchanga zawhna zawt duh tan kan team te nen inzawm rawh."
+        },
+        "Info": {
+            "title": "Contact Information",
+            "subtitle": "Heng channel eng pawh hmang hian direct in min rawn pan rawh.",
+            "address_title": "Office ah Registered a ni",
+            "address_line1": "Amicizia Life Science Pvt. chuan a rawn ti a. LTD.",
+            "address_line2": "601, Manas Anand Apartment-ah a awm a, a hmunah hian mi 100 chuang an awm.",
+            "address_line3": "G.B.Kawngpui, Dongripada, Thane (Maharashtra)-ah a awm a.",
+            "address_country": "India",
+            "email_title": "Email hmanga thawn theih a ni",
+            "phone_title": "Biakhlatna"
+        },
+        "Hours": {
+            "title": "Hnathawh hun chhung",
+            "mon_fri": "Thawhlehni - Zirtawpni",
+            "sat": "Inrinni",
+            "sun": "Chawlhni",
+            "closed": "Khar a ni"
+        },
+        "Form": {
+            "title": "Message min rawn thawn rawh",
+            "subtitle": "Kan team nen WhatsApp chat tan nan a hnuaia form hi fill up rawh.",
+            "firstName": "Hming hmasa",
+            "lastName": "Hming hnuhnung",
+            "email": "Email hmanga thawn theih a ni",
+            "phone": "Biakhlatna",
+            "message": "Thuthawn",
+            "placeholder_firstName": "John",
+            "placeholder_lastName": "Doe a ni",
+            "placeholder_email": "john@example.com ah hian a awm a",
+            "placeholder_phone": "+91 98765 43210 ah biak theih a ni",
+            "placeholder_message": "Engtin nge kan puih theih ang che?",
+            "submit": "WhatsApp ah inbiakna neihpui rawh"
+        },
+        "badge": "Get In Touch rawh",
+        "title": "Min rawn biak theih reng e",
+        "subtitle": "Kan thil siam leh service chungchanga zawhna zawt duh tan kan team te nen inzawm rawh.",
+        "info_title": "Contact Information",
+        "info_desc": "Heng channel eng pawh hmang hian direct in min rawn pan rawh.",
+        "office_label": "Office ah Registered a ni",
+        "email_label": "Email hmanga thawn theih a ni",
+        "phone_label": "Biakhlatna",
+        "hours_title": "Hnathawh hun chhung",
+        "days": {
+            "mon_fri": "Thawhlehni - Zirtawpni",
+            "sat": "Inrinni",
+            "sun": "Chawlhni",
+            "closed": "Khar a ni"
+        },
+        "form_title": "Message min rawn thawn rawh",
+        "form_desc": "Kan team nen WhatsApp chat tan nan a hnuaia form hi fill up rawh.",
+        "form_labels": {
+            "first_name": "Hming hmasa",
+            "last_name": "Hming hnuhnung",
+            "email": "Email hmanga thawn theih a ni",
+            "phone": "Biakhlatna",
+            "message": "Thuthawn"
+        },
+        "placeholders": {
+            "first_name": "John",
+            "last_name": "Doe a ni",
+            "email": "john@example.com ah hian a awm a",
+            "phone": "+91 98765 43210 ah biak theih a ni",
+            "message": "Engtin nge kan puih theih ang che?"
+        },
+        "submit_button": "WhatsApp ah inbiakna neihpui rawh"
+    },
+    "ProductsPage": {
+        "Hero": {
+            "badge_default": "Premium Catalogue a awm a",
+            "title_default": "Damdawi lama thiamna sang tak nei",
+            "title_suffix": "A chinfel dan tur",
+            "subtitle": "Kan scientifically formulated range of veterinary products, ran vulh, vawk, leh companion animal hriselna tha zawka siam chu hmuchhuak rawh."
+        },
+        "Sidebar": {
+            "title": "Category hrang hrang",
+            "all_products": "Product zawng zawng"
+        },
+        "Search": {
+            "showing_results": "<bold>{count}</bold> result a lantir"
+        },
+        "Card": {
+            "view_details": "Details en rawh"
+        },
+        "Empty": {
+            "title": "Products hmuh tur a awm lo",
+            "subtitle": "I filter emaw search term emaw kha siamrem tum ang che.",
+            "clear_filters": "Filters te chu tifai rawh"
+        },
+        "Categories": {
+            "Livestock": "Ran vulh a ni",
+            "Poultry": "Vawk vulh",
+            "Canine": "Canine a ni",
+            "Swine": "Vawk chi hrang hrang",
+            "Aqua": "Aqua a ni",
+            "Homeopathy": "Homeopathy hmanga enkawl a ni",
+            "Over the Counter": "Counter atanga chhuak",
+            "Feline": "Feline a ni"
+        }
+    },
+    "Products": {
+        "title_default": "Damdawi lama thiamna sang tak nei",
+        "title_solutions": "A chinfel dan tur",
+        "description": "Kan scientifically formulated range of veterinary products, ran vulh, vawk, leh companion animal hriselna tha zawka siam chu hmuchhuak rawh.",
+        "badge_default": "Premium Catalogue a awm a",
+        "categories_title": "Category hrang hrang",
+        "all_products": "Product zawng zawng",
+        "showing_results": "Results a lantir",
+        "view_details": "Details en rawh",
+        "empty_title": "Products hmuh tur a awm lo",
+        "empty_desc": "I filter emaw search term emaw kha siamrem tum ang che.",
+        "clear_filters": "Filters te chu tifai rawh"
+    },
+    "Categories": {
+        "Livestock": "Ran vulh a ni",
+        "Poultry": "Vawk vulh",
+        "Canine": "Canine a ni",
+        "Swine": "Vawk chi hrang hrang",
+        "Aqua": "Aqua a ni",
+        "Homeopathy": "Homeopathy hmanga enkawl a ni",
+        "Over the Counter": "Counter atanga chhuak",
+        "Feline": "Feline a ni"
+    },
+    "ProductDetails": {
+        "back_to_products": "Products ah kir leh ila",
+        "available_variants": "Size / Variant awm thei te:",
+        "selected": "A thlan chhuah:",
+        "add_to_inquiry": "Zawhna ah hian add rawh",
+        "download_brochure": "Brochure download rawh",
+        "quality_guaranteed": "Quality a ni tih a chiang",
+        "bulk_delivery": "Bulk Delivery a ni",
+        "inquiry_note": "Hei hian item chu i inquiry list-ah a dah tel a ni. Kan sales team chuan a man leh a awm dan tur an rawn zawt ang che.",
+        "composition": "Phuahkhawm",
+        "indications": "Indication te chu",
+        "dosage": "Dosage & A pek dan tur"
+    }
+}

@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "translate": "node scripts/translate.js",
     "lint": "eslint"
   },
   "dependencies": {
@@ -19,6 +20,7 @@
     "lucide-react": "^0.563.0",
     "mammoth": "^1.11.0",
     "next": "16.1.6",
+    "next-intl": "^4.8.2",
     "pdf-parse": "^1.1.4",
     "react": "19.2.3",
     "react-dom": "19.2.3",
@@ -34,6 +36,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "google-translate-api-x": "^10.7.2",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

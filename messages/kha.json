@@ -1,0 +1,213 @@
+{
+    "HomePage": {
+        "Hero": {
+            "badge": "Ki jingpynbeit ba bha tam jong ka jingsumar mrad",
+            "title": "Pdiang sngewbha ia phi sha ka Amicizia Life Science .",
+            "subtitle": "Ka daw kaba donburom ban shakri ia ki jingri da ki lad ki lynti kiba stad, kiba stad bad kiba stad.",
+            "cta_products": "Shop ia ki mar jong ngi",
+            "cta_learn": "To tip kham bniah"
+        },
+        "WhyUs": {
+            "title": "Balei ka JINGIALOI PARALOK",
+            "subtitle": "Ka jingaiti ha ka jingtbit ha ki jingpynbeit dawai jong ki mrad",
+            "quality_title": "KA JINGPYNLEIT KHLAW IA KA JINGBHA",
+            "client_title": "KA JINGPYNBNA BA KHATDUH IA U KLIENT",
+            "team_title": "KA TEAM BA AITI SHIBUN"
+        },
+        "About": {
+            "title": "SHAPHANG NGI",
+            "description": "Ka Amicizia Life Science ka thmu ban long ka nongialehkai kaba lah ban shaniah & kaba la sngewtynnad ha ka liang ka ri dohkha, ri jingri bad ri um da kaba ai ia ki mar kiba kyrpang & kiba bha sha ki nongthied. Ngi aiti ban wanrah ia ki lad ki lynti kiba thymmai bad ban ai ia ki mar kiba kyrpang ba la shna ha ka jaka shna dawai ba la pynskhem da ka GMP & ISO na ka bynta ban pyndonkam ha ki doktor mrad.",
+            "checklist": {
+                "satisfaction": "Ka jingsngewhun jong ki nongthied",
+                "innovative": "Ki mar ba thymmai bad ba rem dor",
+                "cgmp": "Ka CGMP ha ka jingshna ia ki mar",
+                "employee": "Ka jingïashim bynta jong ki nongtrei bad ka jingpynbha",
+                "compliance": "Ka jingbud ryntih ia ki jingdonkam jong ka ain, ain bad jingpynbeit"
+            },
+            "cta_contact": "Iakynduh ia ngi"
+        },
+        "MissionVision": {
+            "mission_title": "KA JINGTHMU JONG NGI",
+            "mission_desc": "Ban ai ïa ki dawai mrad kiba kyrpang & ki jingbam ba tei met ba la pynwandur ha ka rukom kaba thymmai & kaba thymmai, hapoh ki kyndon kiba bha tam kiba ailad ïa ngi ban ai ïa ka jingpynbeit kaba bha tam ban ai sha ki nongthied ba khatduh jong ngi.",
+            "vision_title": "KA JINGTHMU JONG NGI",
+            "vision_desc": "Ban long kawei na ki Kompani ba pawnam jong ki dawai na ka bynta ka koit ka khiah jong ki mrad, ym tang ha ka jingdie hynrei wat ha ka jingpynmih jingmut thymmai, ka jingthaw dor bad ka jingtreikam kaba bha ryngkat bad ka jingsngew ba khraw jong ka jingkitkhlieh ha ka imlang sahlang."
+        },
+        "Values": {
+            "title": "KI JINGDONKOR JONG NGI",
+            "items": {
+                "team": {
+                    "title": "KYNHUN",
+                    "desc": "Ka kynhun jong ki briew kiba don kajuh ka jingmut kiba pyni ia ki sap kiba kyrpang katba ki dang ialeh ban jop."
+                },
+                "professionalism": {
+                    "title": "KA JINGTREI",
+                    "desc": "La pynpaw da ka Jinglong Hok, Ka Jinglong Hok & Ka Jingburom ha baroh ki jingiadei kam jong ngi."
+                },
+                "excellence": {
+                    "title": "KA JINGBHA",
+                    "desc": "Ka jingaiti ban poi sha jrong bad sha jrong ban pynpoi ia ki jingjop ki bym lah ban ianujor."
+                },
+                "quality": {
+                    "title": "KA JINGBHA",
+                    "desc": "Ki mar kiba bha tam ryngkat bad ki jingpeit bniah kiba pyrkhing ha man la ka kyrdan shna."
+                }
+            }
+        },
+        "Contact": {
+            "title": "IADEI NONG NGI",
+            "addressFirstLine": "601, ka iing manas anand,",
+            "addressSecondLine": "G.B.Road, Dongripada, Thane (Maharashtra)",
+            "followFacebook": "Bud ia ngi ha Facebook",
+            "quickLinksTitle": "Ki jingpyniasoh ba kloi",
+            "livestockCatalog": "Katalog ki jingri",
+            "poultryCatalog": "Katalog ki syiar"
+        }
+    },
+    "Navigation": {
+        "home": "Iing",
+        "products": "Ki mar",
+        "about": "Shaphang jong ngi",
+        "contact": "Iakynduh ia ngi"
+    },
+    "ContactPage": {
+        "Hero": {
+            "badge": "Iakynduh",
+            "title": "Iakynduh ia ngi",
+            "subtitle": "Pyntip sha ka kynhun jong ngi na ka bynta ki jingkylli shaphang ki mar bad ki jingshakri jong ngi."
+        },
+        "Info": {
+            "title": "Jingtip ban iakynduh",
+            "subtitle": "Pyntip beit sha ngi lyngba kano kano na kine ki lad.",
+            "address_title": "Ophis ba la pynrung kyrteng",
+            "address_line1": "Ka jingstad jong ka jingim ka Pvt. LTD.",
+            "address_line2": "601, ka iing manas anand,",
+            "address_line3": "G.B.Road, Dongripada, Thane (Maharashtra)",
+            "address_country": "ka India",
+            "email_title": "Email",
+            "phone_title": "Ka phone"
+        },
+        "Hours": {
+            "title": "Ki kynta treikam",
+            "mon_fri": "Sngi Nyngkong - Sngi Palei",
+            "sat": "Sngi Saitjain",
+            "sun": "Sngi u trai",
+            "closed": "La khang"
+        },
+        "Form": {
+            "title": "Phah ia ka khubor sha ngi",
+            "subtitle": "Pyndap ia ka form harum ban sdang ia ka jingiakren WhatsApp bad ka kynhun jong ngi.",
+            "firstName": "Kyrteng",
+            "lastName": "Jait",
+            "email": "Email",
+            "phone": "Ka phone",
+            "message": "Khubor",
+            "placeholder_firstName": "Ioannis",
+            "placeholder_lastName": "Hato",
+            "placeholder_email": "john@nuksa.com",
+            "placeholder_phone": "+91 98765 43210",
+            "placeholder_message": "Kumno ngi lah ban iarap ia phi?",
+            "submit": "Chat ha ka WhatsApp ."
+        },
+        "badge": "Iakynduh",
+        "title": "Iakynduh ia ngi",
+        "subtitle": "Pyntip sha ka kynhun jong ngi na ka bynta ki jingkylli shaphang ki mar bad ki jingshakri jong ngi.",
+        "info_title": "Jingtip ban iakynduh",
+        "info_desc": "Pyntip beit sha ngi lyngba kano kano na kine ki lad.",
+        "office_label": "Ophis ba la pynrung kyrteng",
+        "email_label": "Email",
+        "phone_label": "Ka phone",
+        "hours_title": "Ki kynta treikam",
+        "days": {
+            "mon_fri": "Sngi Nyngkong - Sngi Palei",
+            "sat": "Sngi Saitjain",
+            "sun": "Sngi u trai",
+            "closed": "La khang"
+        },
+        "form_title": "Phah ia ka khubor sha ngi",
+        "form_desc": "Pyndap ia ka form harum ban sdang ia ka jingiakren WhatsApp bad ka kynhun jong ngi.",
+        "form_labels": {
+            "first_name": "Kyrteng",
+            "last_name": "Jait",
+            "email": "Email",
+            "phone": "Ka phone",
+            "message": "Khubor"
+        },
+        "placeholders": {
+            "first_name": "Ioannis",
+            "last_name": "Hato",
+            "email": "john@nuksa.com",
+            "phone": "+91 98765 43210",
+            "message": "Kumno ngi lah ban iarap ia phi?"
+        },
+        "submit_button": "Chat ha ka WhatsApp ."
+    },
+    "ProductsPage": {
+        "Hero": {
+            "badge_default": "Katalog ba hakhmat eh",
+            "title_default": "Ka jingtbit ha ka kam shna dawai",
+            "title_suffix": "Ki jingpynbeit",
+            "subtitle": "Lap ia ki jingbam ba la shna da ka science jong ngi kiba la shna na ka bynta ka jingkoit jingkhiah jong ki mrad, ki syiar, bad ki mrad ba iadon ryngkat kiba kham bha."
+        },
+        "Sidebar": {
+            "title": "Ki jait",
+            "all_products": "Baroh ki mar"
+        },
+        "Search": {
+            "showing_results": "Ka jingpyni <bold>{khein}</bold> ia ki jingmih"
+        },
+        "Card": {
+            "view_details": "Peit ia ki jingtip ba bniah"
+        },
+        "Empty": {
+            "title": "Ym shym la lap ia ki mar",
+            "subtitle": "Pyrshang ban pynbeit ia ki filter lane ki kyntien wad jong phi.",
+            "clear_filters": "Pynkhuid ia ki jingpynkhuid"
+        },
+        "Categories": {
+            "Livestock": "Ki jingri jingdup",
+            "Poultry": "Ka jingri syiar",
+            "Canine": "Ki masi",
+            "Swine": "Sniang",
+            "Aqua": "Ka um",
+            "Homeopathy": "Ka jingsumar ïing",
+            "Over the Counter": "Halor ka counter",
+            "Feline": "Ki masi"
+        }
+    },
+    "Products": {
+        "title_default": "Ka jingtbit ha ka kam shna dawai",
+        "title_solutions": "Ki jingpynbeit",
+        "description": "Lap ia ki jingbam ba la shna da ka science jong ngi kiba la shna na ka bynta ka jingkoit jingkhiah jong ki mrad, ki syiar, bad ki mrad ba iadon ryngkat kiba kham bha.",
+        "badge_default": "Katalog ba hakhmat eh",
+        "categories_title": "Ki jait",
+        "all_products": "Baroh ki mar",
+        "showing_results": "Ka jingpyni ia ki jingmih",
+        "view_details": "Peit ia ki jingtip ba bniah",
+        "empty_title": "Ym shym la lap ia ki mar",
+        "empty_desc": "Pyrshang ban pynbeit ia ki filter lane ki kyntien wad jong phi.",
+        "clear_filters": "Pynkhuid ia ki jingpynkhuid"
+    },
+    "Categories": {
+        "Livestock": "Ki jingri jingdup",
+        "Poultry": "Ka jingri syiar",
+        "Canine": "Ki masi",
+        "Swine": "Sniang",
+        "Aqua": "Ka um",
+        "Homeopathy": "Ka jingsumar ïing",
+        "Over the Counter": "Halor ka counter",
+        "Feline": "Ki masi"
+    },
+    "ProductDetails": {
+        "back_to_products": "Phai biang sha ki mar",
+        "available_variants": "Ki jingheh / jait ba lah ban ioh:",
+        "selected": "La jied:",
+        "add_to_inquiry": "Pyndap ia ka jingkylli",
+        "download_brochure": "Pynduh ia ka kot lyngkdop",
+        "quality_guaranteed": "La pynthikna ia ka jingbha",
+        "bulk_delivery": "Ka jingpynpoi bun",
+        "inquiry_note": "Kane ka pyndap ia ka item ha ka list jingkylli jong phi. Ka kynhun die jong ngi kan iakynduh ia phi bad ka dor bad ka jingdon.",
+        "composition": "Kaba pynlong",
+        "indications": "Ki jingpyni",
+        "dosage": "Ka jingai dawai bad jingai dawai"
+    }
+}

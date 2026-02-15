@@ -1,6 +1,9 @@
 import Link from "next/link";
+import { useTranslations } from "next-intl";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export function Footer() {
+    const t = useTranslations('Navigation');
     return (
         <footer className="border-t bg-muted/40">
             <div className="container py-8 md:py-12">
@@ -36,15 +39,18 @@ export function Footer() {
                         <ul className="space-y-2 text-sm text-muted-foreground">
                             <li>
                                 <a href="/#contact-us" className="hover:text-primary">
-                                    About Us
+                                    {t('about')}
                                 </a>
                             </li>
                             <li>
                                 <Link href="/contact" className="hover:text-primary">
-                                    Contact
+                                    {t('contact')}
                                 </Link>
                             </li>
                         </ul>
+                        <div className="mt-6">
+                            <LanguageSwitcher />
+                        </div>
                     </div>
                     <div>
                         <h4 className="font-semibold mb-4">Contact</h4>

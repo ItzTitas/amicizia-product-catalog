@@ -7,6 +7,7 @@ import { ProductSort } from "@/components/product/ProductSort";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge, Package2, Sparkles, ChevronRight } from "lucide-react";
+import { getTranslations } from 'next-intl/server';
 
 export const metadata: Metadata = {
     title: "Amicizia Life Science | Veterinary & Poultry Products in Kolkata",
@@ -16,10 +17,18 @@ export const dynamic = 'force-dynamic';
 
 export default async function ProductsPage({
     searchParams,
+    params
 }: {
     searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+    params: Promise<{ locale: string }>;
 }) {
     const resolvedParams = await searchParams;
+    const { locale } = await params;
+
+    // Translations
+    const t = await getTranslations({ locale, namespace: 'Products' });
+    const catT = await getTranslations({ locale, namespace: 'Categories' });
+
     const categoryFilter = typeof resolvedParams.category === 'string' ? resolvedParams.category : null;
     const searchTerm = typeof resolvedParams.search === 'string' ? resolvedParams.search.toLowerCase() : null;
 
@@ -46,6 +55,8 @@ export default async function ProductsPage({
         filteredProducts.sort((a, b) => b.name.localeCompare(a.name));
     }
 
+    const displayCategory = categoryFilter ? catT(categoryFilter as any) : t('badge_default');
+
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-teal-50/30">
             {/* Modern Hero Section with Gradient */}
@@ -62,16 +73,19 @@ export default async function ProductsPage({
                     <div className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-teal-400 via-cyan-400 to-blue-400 rounded-full shadow-lg mb-6 animate-on-scroll hover:scale-105 transition-transform">
                         <Sparkles className="h-5 w-5 text-white animate-pulse" />
                         <span className="text-sm font-bold text-white">
-                            {categoryFilter ? categoryFilter : "Premium Catalog"}
+                            {displayCategory}
                         </span>
                     </div>
 
                     <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 text-white drop-shadow-2xl">
-                        {categoryFilter ? `${categoryFilter} Solutions` : "Pharmaceutical Excellence"}
+                        {categoryFilter
+                            ? `${catT(categoryFilter as any)} ${t('title_solutions')}`
+                            : t('title_default')
+                        }
                     </h1>
 
                     <p className="text-lg md:text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed">
-                        Discover our scientifically formulated range of veterinary products designed for superior livestock, poultry, and companion animal health.
+                        {t('description')}
                     </p>
                 </div>
             </div>
@@ -83,14 +97,14 @@ export default async function ProductsPage({
                         <div className="bg-white/80 backdrop-blur-xl rounded-2xl border border-teal-100 p-6 shadow-xl hover:shadow-2xl transition-shadow">
                             <h3 className="font-bold text-lg mb-6 flex items-center gap-3 text-slate-800">
                                 <span className="h-8 w-1.5 bg-gradient-to-b from-teal-400 to-cyan-500 rounded-full"></span>
-                                Categories
+                                {t('categories_title')}
                             </h3>
                             <div className="flex flex-col space-y-2">
                                 <Link
                                     href="/products"
                                     className={`inline-flex items-center justify-start whitespace-nowrap rounded-xl text-sm font-semibold transition-all h-12 px-5 py-3 w-full text-left ${!categoryFilter ? "bg-gradient-to-r from-teal-500 to-cyan-500 text-white shadow-lg shadow-teal-500/50" : "hover:bg-teal-50 hover:translate-x-2 text-slate-700"}`}
                                 >
-                                    ✨ All Products
+                                    ✨ {t('all_products')}
                                 </Link>
                                 {categories.map((cat) => (
                                     <Link
@@ -106,7 +120,8 @@ export default async function ProductsPage({
                                         {cat === 'Homeopathy' && '🌿'}
                                         {cat === 'Over the Counter' && '💊'}
                                         {cat === 'Feline' && '🐾'}
-                                        {cat}
+                                        {' '}
+                                        {catT(cat as any)}
                                     </Link>
                                 ))}
                             </div>
@@ -119,7 +134,7 @@ export default async function ProductsPage({
                         <div className="bg-white/80 backdrop-blur-xl rounded-2xl border border-teal-100 p-6 shadow-xl mb-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sticky top-0 z-10 md:static">
                             <div>
                                 <p className="text-slate-600 text-sm">
-                                    Showing <span className="font-bold text-teal-600 text-lg">{filteredProducts.length}</span> results
+                                    {t('showing_results')} <span className="font-bold text-teal-600 text-lg">{filteredProducts.length}</span>
                                 </p>
                             </div>
                             <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto items-center">
@@ -166,7 +181,7 @@ export default async function ProductsPage({
                                                         ${cat === 'Feline' ? 'bg-gradient-to-r from-indigo-400 to-blue-500' : ''}
                                                         text-white font-bold shadow-lg backdrop-blur-sm border-0
                                                     `}>
-                                                        {cat}
+                                                        {catT(cat as any)}
                                                     </Badge>
                                                 ))}
                                             </div>
@@ -185,7 +200,7 @@ export default async function ProductsPage({
                                         {/* Modern CTA Button */}
                                         <CardFooter className="pt-0 mt-auto pb-5">
                                             <div className="w-full inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-bold transition-all h-11 px-6 py-3 bg-gradient-to-r from-slate-800 to-slate-900 text-white group-hover:from-teal-500 group-hover:to-cyan-500 shadow-md group-hover:shadow-xl group-hover:shadow-teal-500/50 pointer-events-none">
-                                                View Details
+                                                {t('view_details')}
                                                 <ChevronRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                                             </div>
                                         </CardFooter>
@@ -198,10 +213,10 @@ export default async function ProductsPage({
                         {filteredProducts.length === 0 && (
                             <div className="text-center py-20 border-2 border-dashed border-teal-200 rounded-2xl bg-gradient-to-br from-slate-50 to-teal-50/50">
                                 <Package2 className="h-16 w-16 mx-auto text-teal-300 mb-6" />
-                                <h3 className="text-xl font-bold mb-3 text-slate-800">No products found</h3>
-                                <p className="text-slate-600 mb-8">Try adjusting your filters or search terms.</p>
+                                <h3 className="text-xl font-bold mb-3 text-slate-800">{t('empty_title')}</h3>
+                                <p className="text-slate-600 mb-8">{t('empty_desc')}</p>
                                 <Button variant="outline" asChild className="border-teal-300 text-teal-600 hover:bg-teal-50">
-                                    <Link href="/products">Clear Filters</Link>
+                                    <Link href="/products">{t('clear_filters')}</Link>
                                 </Button>
                             </div>
                         )}
