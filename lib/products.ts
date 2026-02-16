@@ -1567,7 +1567,9 @@ export const products: Product[] = [
     "indications": "Bacterial soft tissue infections.",
     "dosage": "",
     "packaging": "Standard Packaging",
-    "images": [],
+    "images": [
+      "/images/products/Amixin.png"
+    ],
     "skus": [
       {
         "id": "amixin-0",
@@ -1638,7 +1640,9 @@ export const products: Product[] = [
     "indications": "Farm sanitation and biosecurity management.",
     "dosage": "",
     "packaging": "Standard Packaging",
-    "images": [],
+    "images": [
+      "/images/products/Farmsafe.png"
+    ],
     "skus": [
       {
         "id": "farmsafe-0",
@@ -1680,7 +1684,9 @@ export const products: Product[] = [
     "indications": "Coliform infections, salmonellosis, respiratory infections, pullorum disease.",
     "dosage": "",
     "packaging": "Standard Packaging",
-    "images": [],
+    "images": [
+      "/images/products/Furavet.png"
+    ],
     "skus": [
       {
         "id": "furavet-0",
@@ -1701,7 +1707,9 @@ export const products: Product[] = [
     "indications": "Coprophagia (stool eating)\nLitter box raiding\nFoul stool odor",
     "dosage": "",
     "packaging": "Standard Packaging",
-    "images": [],
+    "images": [
+      "/images/products/Good Habit.png"
+    ],
     "skus": [
       {
         "id": "good-habit-0",
@@ -1743,7 +1751,9 @@ export const products: Product[] = [
     "indications": "Dehydration\nDiarrhoea\nVomiting\nHeat stress\nPost-parturition recovery",
     "dosage": "",
     "packaging": "Standard Packaging",
-    "images": [],
+    "images": [
+      "/images/products/Orasol.png"
+    ],
     "skus": [
       {
         "id": "orasol-0",
@@ -1915,7 +1925,9 @@ export const products: Product[] = [
     "indications": "Skin hygiene\nCoat maintenance\nMild skin infections\nRoutine hygiene",
     "dosage": "",
     "packaging": "Standard Packaging",
-    "images": [],
+    "images": [
+      "/images/products/Shinofur Natural.png"
+    ],
     "skus": [
       {
         "id": "shinofur-natural-0",
@@ -1936,7 +1948,9 @@ export const products: Product[] = [
     "indications": "Ticks\nFleas\nLice",
     "dosage": "",
     "packaging": "Standard Packaging",
-    "images": [],
+    "images": [
+      "/images/products/Shinofur Power.png"
+    ],
     "skus": [
       {
         "id": "shinofur-power-0",
