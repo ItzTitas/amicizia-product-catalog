@@ -12,6 +12,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.amicizialifescience.com"),
   title: "Amicizia Life Science | Veterinary,Livestock,Canine & Poultry Healthcare Products in India",
   description: "Amicizia Life Science: Providing scientific, technical, and clinical solutions for livestock, poultry, and companion animal health.",
   verification: {
@@ -37,6 +38,9 @@ export const metadata: Metadata = {
     ],
     locale: "en_US",
     type: "website",
+  },
+  alternates: {
+    canonical: "./",
   },
 };
 
